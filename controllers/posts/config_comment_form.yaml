@@ -6,25 +6,25 @@
 name: Comment
 
 # Model Form Field configuration
-form: ~/plugins/october/test/models/comment/fields_simple.yaml
+form: ~/plugins/winter/test/models/comment/fields_simple.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Comment
+modelClass: Winter\Test\Models\Comment
 
 # Default redirect location
-defaultRedirect: october/test/posts
+defaultRedirect: winter/test/posts
 
 # Create page
 create:
     title: Create Comments
-    redirect: october/test/posts/update/:id
-    redirectClose: october/test/posts
+    redirect: winter/test/posts/update/:id
+    redirectClose: winter/test/posts
 
 # Update page
 update:
     title: Edit Comments
-    redirect: october/test/posts
-    redirectClose: october/test/posts
+    redirect: winter/test/posts
+    redirectClose: winter/test/posts
 
 # Preview page
 preview:

@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -11,7 +11,7 @@ class Role extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_roles';
+    public $table = 'winter_test_roles';
 
     /**
      * @var array Guarded fields
@@ -27,7 +27,7 @@ class Role extends Model
      * @var array Relations
      */
     public $belongsToMany = [
-        'users' => ['October\Test\Models\User', 'table' => 'october_test_users_roles']
+        'users' => ['Winter\Test\Models\User', 'table' => 'winter_test_users_roles']
     ];
 
     public $attachMany = [

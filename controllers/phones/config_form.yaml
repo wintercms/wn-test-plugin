@@ -6,25 +6,25 @@
 name: Phone
 
 # Model Form Field configuration
-form: $/october/test/models/phone/fields.yaml
+form: $/winter/test/models/phone/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Phone
+modelClass: Winter\Test\Models\Phone
 
 # Default redirect location
-defaultRedirect: october/test/phones
+defaultRedirect: winter/test/phones
 
 # Create page
 create:
     title: Create Phone
-    redirect: october/test/phones/update/:id
-    redirectClose: october/test/phones
+    redirect: winter/test/phones/update/:id
+    redirectClose: winter/test/phones
 
 # Update page
 update:
     title: Edit Phone
-    redirect: october/test/phones
-    redirectClose: october/test/phones
+    redirect: winter/test/phones
+    redirectClose: winter/test/phones
 
 # Preview page
 preview:

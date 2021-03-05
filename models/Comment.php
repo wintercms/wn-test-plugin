@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -8,12 +8,12 @@ use Model;
 class Comment extends Model
 {
 
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_comments';
+    public $table = 'winter_test_comments';
 
     /**
      * @var array Guarded fields
@@ -41,8 +41,8 @@ class Comment extends Model
      * @var array Relations
      */
     public $belongsTo = [
-        'user' => ['October\Test\Models\User'],
-        'post' => ['October\Test\Models\Post']
+        'user' => ['Winter\Test\Models\User'],
+        'post' => ['Winter\Test\Models\Post']
     ];
 
     public $attachOne = [

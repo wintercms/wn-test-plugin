@@ -1,4 +1,4 @@
-<?php namespace October\Test\Controllers;
+<?php namespace Winter\Test\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -6,7 +6,7 @@ use Backend\Classes\Controller;
 /**
  * Posts [and Comments] Back-end Controller
  *
- * This is a mighty fine example of what October can do, here we have a single controller
+ * This is a mighty fine example of what Winter can do, here we have a single controller
  * managing two Models (Posts and Comments). The ListController behavior handles two lists
  * easily, by passing an array of definitions and config files. The FormController behavior
  * natively handles the Posts, but for Comments we intercept the construction process and
@@ -32,7 +32,7 @@ class Posts extends Controller
 
     public $relationConfig = 'config_relation.yaml';
 
-    public $requiredPermissions = ['october.test.access_plugin'];
+    public $requiredPermissions = ['winter.test.access_plugin'];
 
     public function __construct()
     {
@@ -50,7 +50,7 @@ class Posts extends Controller
 
         parent::__construct();
 
-        BackendMenu::setContext('October.Test', 'test', 'posts');
+        BackendMenu::setContext('Winter.Test', 'test', 'posts');
     }
 
     public function index()

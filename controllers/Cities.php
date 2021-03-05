@@ -1,4 +1,4 @@
-<?php namespace October\Test\Controllers;
+<?php namespace Winter\Test\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -20,6 +20,6 @@ class Cities extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('October.Test', 'test', 'cities');
+        BackendMenu::setContext('Winter.Test', 'test', 'cities');
     }
 }

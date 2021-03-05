@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -7,12 +7,12 @@ use Model;
  */
 class Channel extends Model
 {
-    use \October\Rain\Database\Traits\NestedTree;
+    use \Winter\Storm\Database\Traits\NestedTree;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_channels';
+    public $table = 'winter_test_channels';
 
     /**
      * @var array Guarded fields
@@ -30,12 +30,12 @@ class Channel extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [
-        'user' => 'October\Test\Models\User'
+        'user' => 'Winter\Test\Models\User'
     ];
     public $belongsToMany = [
         'related' => [
-            'October\Test\Models\Channel',
-            'table' => 'october_test_related_channels',
+            'Winter\Test\Models\Channel',
+            'table' => 'winter_test_related_channels',
             'key' => 'related_id'
         ]
     ];

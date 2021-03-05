@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -7,7 +7,7 @@ use Model;
  */
 class Attribute extends Model
 {
-    use \October\Rain\Database\Traits\Sortable;
+    use \Winter\Storm\Database\Traits\Sortable;
 
     const GENERAL_STATUS = 'general.status';
     const GENERAL_TYPE = 'general.type';
@@ -15,7 +15,7 @@ class Attribute extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_attributes';
+    public $table = 'winter_test_attributes';
 
     /**
      * @var array Guarded fields

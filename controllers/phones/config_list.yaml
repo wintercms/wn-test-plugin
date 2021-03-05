@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/phone/columns.yaml
+list: $/winter/test/models/phone/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Phone
+modelClass: Winter\Test\Models\Phone
 
 # List Title
 title: Manage Phones
 
 # Link URL for each record
-recordUrl: october/test/phones/update/:id
+recordUrl: winter/test/phones/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

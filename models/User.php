@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -8,12 +8,12 @@ use Model;
 class User extends Model
 {
 
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_users';
+    public $table = 'winter_test_users';
 
     /**
      * @var array Guarded fields
@@ -39,28 +39,28 @@ class User extends Model
      */
     public $belongsToMany = [
         'roles' => [
-            'October\Test\Models\Role',
-            'table' => 'october_test_users_roles',
+            'Winter\Test\Models\Role',
+            'table' => 'winter_test_users_roles',
             'timestamps' => true,
             'order' => 'name'
         ],
         'roles_count' => [
-            'October\Test\Models\Role',
-            'table' => 'october_test_users_roles',
+            'Winter\Test\Models\Role',
+            'table' => 'winter_test_users_roles',
             'count' => true
         ],
         'roles_pivot' => [
-            'October\Test\Models\Role',
-            'table' => 'october_test_users_roles',
+            'Winter\Test\Models\Role',
+            'table' => 'winter_test_users_roles',
             'pivot' => ['clearance_level', 'is_executive'],
             'timestamps' => true
         ],
         'roles_pivot_model' => [
-            'October\Test\Models\Role',
-            'table' => 'october_test_users_roles',
+            'Winter\Test\Models\Role',
+            'table' => 'winter_test_users_roles',
             'pivot' => ['clearance_level', 'is_executive'],
             'timestamps' => true,
-            'pivotModel' => 'October\Test\Models\UserRolePivot',
+            'pivotModel' => 'Winter\Test\Models\UserRolePivot',
         ],
     ];
 
@@ -69,7 +69,7 @@ class User extends Model
         'photo_secure' => ['System\Models\File', 'public' => false],
         'certificate' => ['System\Models\File'],
         'certificate_secure' => ['System\Models\File', 'public' => false],
-        'custom_file' => 'October\Test\Models\CustomFile'
+        'custom_file' => 'Winter\Test\Models\CustomFile'
     ];
 
     public $attachMany = [

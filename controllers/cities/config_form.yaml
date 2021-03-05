@@ -6,25 +6,25 @@
 name: City
 
 # Model Form Field configuration
-form: $/october/test/models/city/fields.yaml
+form: $/winter/test/models/city/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\City
+modelClass: Winter\Test\Models\City
 
 # Default redirect location
-defaultRedirect: october/test/cities
+defaultRedirect: winter/test/cities
 
 # Create page
 create:
     title: Create City
-    redirect: october/test/cities/update/:id
-    redirectClose: october/test/cities
+    redirect: winter/test/cities/update/:id
+    redirectClose: winter/test/cities
 
 # Update page
 update:
     title: Edit City
-    redirect: october/test/cities
-    redirectClose: october/test/cities
+    redirect: winter/test/cities
+    redirectClose: winter/test/cities
 
 # Preview page
 preview:

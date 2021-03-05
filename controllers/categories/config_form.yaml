@@ -6,25 +6,25 @@
 name: Category
 
 # Model Form Field configuration
-form: $/october/test/models/category/fields.yaml
+form: $/winter/test/models/category/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Category
+modelClass: Winter\Test\Models\Category
 
 # Default redirect location
-defaultRedirect: october/test/categories
+defaultRedirect: winter/test/categories
 
 # Create page
 create:
     title: Create Category
-    redirect: october/test/categories/update/:id
-    redirectClose: october/test/categories
+    redirect: winter/test/categories/update/:id
+    redirectClose: winter/test/categories
 
 # Update page
 update:
     title: Edit Category
-    redirect: october/test/categories
-    redirectClose: october/test/categories
+    redirect: winter/test/categories
+    redirectClose: winter/test/categories
 
 # Preview page
 preview:

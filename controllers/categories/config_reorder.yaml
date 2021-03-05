@@ -9,7 +9,7 @@ title: Reorder Categories
 nameFrom: name
 
 # Model Class name
-modelClass: October\Test\Models\Category
+modelClass: Winter\Test\Models\Category
 
 # Toolbar widget configuration
 toolbar:

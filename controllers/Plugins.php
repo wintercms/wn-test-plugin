@@ -1,8 +1,8 @@
-<?php namespace October\Test\Controllers;
+<?php namespace Winter\Test\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
-use October\Test\Models\Meta;
+use Winter\Test\Models\Meta;
 
 /**
  * Plugins Back-end Controller
@@ -17,18 +17,18 @@ class Plugins extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
-    public $requiredPermissions = ['october.test.access_plugin'];
+    public $requiredPermissions = ['winter.test.access_plugin'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('October.Test', 'test', 'reviews');
+        BackendMenu::setContext('Winter.Test', 'test', 'reviews');
     }
 
     public function formExtendFields($form)
     {
-        $config = $this->makeConfig('$/october/test/models/meta/fields.yaml');
+        $config = $this->makeConfig('$/winter/test/models/meta/fields.yaml');
 
         foreach ($config->fields as $field => $options) {
             $form->addTabFields([

@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/page/columns.yaml
+list: $/winter/test/models/page/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Page
+modelClass: Winter\Test\Models\Page
 
 # List Title
 title: Manage Pages
 
 # Link URL for each record
-recordUrl: october/test/pages/update/:id
+recordUrl: winter/test/pages/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -7,12 +7,12 @@ use Model;
  */
 class Tag extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_tags';
+    public $table = 'winter_test_tags';
 
     /**
      * @var array Guarded fields
@@ -42,7 +42,7 @@ class Tag extends Model
     public $belongsToMany = [
         'posts' => [
             Post::class,
-            'table' => 'october_test_posts_tags',
+            'table' => 'winter_test_posts_tags',
             'key' => 'tag_id',
             'otherKey' => 'post_id'
         ]
