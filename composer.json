@@ -8,11 +8,13 @@
     "authors": [
         {
             "name": "Samuel Georges",
-            "email": "hello@octobercms.com"
+            "email": "hello@octobercms.com",
+            "role": "Original Author"
         },
         {
             "name": "Luke Towers",
-            "email": "octobercms@luketowers.ca"
+            "email": "wintercms@luketowers.ca",
+            "role": "Maintainer"
         }
     ],
     "require": {
