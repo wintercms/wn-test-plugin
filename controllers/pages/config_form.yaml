@@ -6,25 +6,25 @@
 name: Page
 
 # Model Form Field configuration
-form: $/october/test/models/page/fields.yaml
+form: $/winter/test/models/page/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Page
+modelClass: Winter\Test\Models\Page
 
 # Default redirect location
-defaultRedirect: october/test/pages
+defaultRedirect: winter/test/pages
 
 # Create page
 create:
     title: Create Page
-    redirect: october/test/pages/update/:id
-    redirectClose: october/test/pages
+    redirect: winter/test/pages/update/:id
+    redirectClose: winter/test/pages
 
 # Update page
 update:
     title: Edit Page
-    redirect: october/test/pages
-    redirectClose: october/test/pages
+    redirect: winter/test/pages
+    redirectClose: winter/test/pages
 
 # Preview page
 preview:

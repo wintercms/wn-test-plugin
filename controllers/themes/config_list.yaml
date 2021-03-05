@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/theme/columns.yaml
+list: $/winter/test/models/theme/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Theme
+modelClass: Winter\Test\Models\Theme
 
 # List Title
 title: Manage Themes
 
 # Link URL for each record
-recordUrl: october/test/themes/update/:id
+recordUrl: winter/test/themes/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

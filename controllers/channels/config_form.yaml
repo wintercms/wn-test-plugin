@@ -6,25 +6,25 @@
 name: Channel
 
 # Model Form Field configuration
-form: $/october/test/models/channel/fields.yaml
+form: $/winter/test/models/channel/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Channel
+modelClass: Winter\Test\Models\Channel
 
 # Default redirect location
-defaultRedirect: october/test/channels
+defaultRedirect: winter/test/channels
 
 # Create page
 create:
     title: Create Channel
-    redirect: october/test/channels/update/:id
-    redirectClose: october/test/channels
+    redirect: winter/test/channels/update/:id
+    redirectClose: winter/test/channels
 
 # Update page
 update:
     title: Edit Channel
-    redirect: october/test/channels
-    redirectClose: october/test/channels
+    redirect: winter/test/channels
+    redirectClose: winter/test/channels
 
 # Preview page
 preview:

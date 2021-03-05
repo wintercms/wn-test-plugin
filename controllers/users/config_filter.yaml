@@ -10,7 +10,7 @@ scopes:
     roles:
         label: Role
         scope: applyRoleFilter
-        modelClass: October\Test\Models\Role
+        modelClass: Winter\Test\Models\Role
         nameFrom: name
     idRange:
         label: ID Range

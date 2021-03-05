@@ -6,25 +6,25 @@
 name: Gallery
 
 # Model Form Field configuration
-form: $/october/test/models/gallery/fields.yaml
+form: $/winter/test/models/gallery/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Gallery
+modelClass: Winter\Test\Models\Gallery
 
 # Default redirect location
-defaultRedirect: october/test/galleries
+defaultRedirect: winter/test/galleries
 
 # Create page
 create:
     title: Create Gallery
-    redirect: october/test/galleries/update/:id
-    redirectClose: october/test/galleries
+    redirect: winter/test/galleries/update/:id
+    redirectClose: winter/test/galleries
 
 # Update page
 update:
     title: Edit Gallery
-    redirect: october/test/galleries
-    redirectClose: october/test/galleries
+    redirect: winter/test/galleries
+    redirectClose: winter/test/galleries
 
 # Preview page
 preview:

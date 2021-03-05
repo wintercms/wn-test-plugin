@@ -1,6 +1,6 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
-use October\Rain\Database\Pivot;
+use Winter\Storm\Database\Pivot;
 
 /**
  * User-Role Pivot Model
@@ -8,7 +8,7 @@ use October\Rain\Database\Pivot;
 class UserRolePivot extends Pivot
 {
 
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var array Rules

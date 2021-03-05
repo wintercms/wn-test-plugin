@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('october/test/locations') ?>">Locations</a></li>
+        <li><a href="<?= Backend::url('winter/test/locations') ?>">Locations</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -41,7 +41,7 @@
                     data-request-confirm="Delete this location?">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('october/test/locations') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('winter/test/locations') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('october/test/locations') ?>" class="btn btn-default">Return to locations list</a></p>
+    <p><a href="<?= Backend::url('winter/test/locations') ?>" class="btn btn-default">Return to locations list</a></p>
 
 <?php endif ?>

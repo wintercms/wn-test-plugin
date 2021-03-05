@@ -1,4 +1,4 @@
-<?php namespace October\Test\Controllers;
+<?php namespace Winter\Test\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
@@ -16,12 +16,12 @@ class Countries extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
-    public $requiredPermissions = ['october.test.access_plugin'];
+    public $requiredPermissions = ['winter.test.access_plugin'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('October.Test', 'test', 'countries');
+        BackendMenu::setContext('Winter.Test', 'test', 'countries');
     }
 }
