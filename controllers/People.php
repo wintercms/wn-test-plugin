@@ -1,8 +1,10 @@
-<?php namespace October\Test\Controllers;
+<?php namespace Winter\Test\Controllers;
 
 use BackendMenu;
+use Winter\Test\Models\Phone;
+use Backend\Classes\FormField;
 use Backend\Classes\Controller;
-use October\Test\Models\Phone;
+use Backend\FormWidgets\DataTable;
 
 /**
  * People Back-end Controller
@@ -19,13 +21,13 @@ class People extends Controller
     public $listConfig = 'config_list.yaml';
     public $relationConfig = 'config_relation.yaml';
 
-    public $requiredPermissions = ['october.test.access_plugin'];
+    public $requiredPermissions = ['winter.test.access_plugin'];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('October.Test', 'test', 'people');
+        BackendMenu::setContext('Winter.Test', 'test', 'people');
     }
 
     public function formExtendModel($model)
@@ -50,5 +52,37 @@ class People extends Controller
         ];
 
         return ['result' => $results];
+    }
+
+    public function onModelShowAddDatabaseColumnsPopup()
+    {
+        $config  = $this->makeConfig([
+            'toolbar' => false,
+            'columns' => [
+                'type'   => [
+                    'title'   => 'Widget Type',
+                    'type'    => 'dropdown',
+                    'options' => [
+                        'petty' => 'Petty',
+                        'minor' => 'Minor',
+                        'major' => 'Major',
+                        'critical' => 'Critical'
+                    ],
+                ],
+            ],
+        ]);
+
+        $field = new FormField('add_database_columns', 'add_database_columns');
+        $field->value = [
+            ['a']
+        ];
+
+        $datatable = new DataTable($this, $field, $config);
+        $datatable->alias = 'add_database_columns_datatable';
+        $datatable->bindToController();
+
+        return $this->makePartial('datatable', [
+            'datatable' => $datatable,
+        ]);
     }
 }

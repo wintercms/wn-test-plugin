@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/city/columns.yaml
+list: $/winter/test/models/city/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\City
+modelClass: Winter\Test\Models\City
 
 # List Title
 title: Manage Cities
 
 # Link URL for each record
-recordUrl: october/test/cities/update/:id
+recordUrl: winter/test/cities/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

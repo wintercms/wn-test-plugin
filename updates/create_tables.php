@@ -1,7 +1,7 @@
-<?php namespace October\Test\Updates;
+<?php namespace Winter\Test\Updates;
 
 use Schema;
-use October\Rain\Database\Updates\Migration;
+use Winter\Storm\Database\Updates\Migration;
 
 class CreateTables extends Migration
 {
@@ -11,7 +11,7 @@ class CreateTables extends Migration
          * Test 1: People
          */
 
-        Schema::create('october_test_people', function($table)
+        Schema::create('winter_test_people', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -23,11 +23,13 @@ class CreateTables extends Migration
             $table->time('birthtime')->nullable();
             $table->date('birthdate')->nullable();
             $table->string('favcolor')->nullable();
+            $table->text('hobbies')->nullable();
+            $table->text('sports')->nullable();
             $table->boolean('is_married')->nullable();
             $table->timestamps();
         });
 
-        Schema::create('october_test_phones', function($table)
+        Schema::create('winter_test_phones', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -43,7 +45,7 @@ class CreateTables extends Migration
          * Test 2: Posts
          */
 
-        Schema::create('october_test_posts', function($table)
+        Schema::create('winter_test_posts', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -61,7 +63,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_comments', function($table)
+        Schema::create('winter_test_comments', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -71,12 +73,13 @@ class CreateTables extends Migration
             $table->text('content_html')->nullable();
             $table->text('breakdown')->nullable();
             $table->text('mood')->nullable();
+            $table->text('quotes')->nullable();
             $table->boolean('is_visible')->default(true);
             $table->integer('post_id')->unsigned()->nullable()->index();
             $table->timestamps();
         });
 
-        Schema::create('october_test_tags', function($table)
+        Schema::create('winter_test_tags', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -84,7 +87,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_posts_tags', function($table)
+        Schema::create('winter_test_posts_tags', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('post_id');
@@ -96,7 +99,7 @@ class CreateTables extends Migration
          * Test 3: Users
          */
 
-        Schema::create('october_test_users', function($table)
+        Schema::create('winter_test_users', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -107,7 +110,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_roles', function($table)
+        Schema::create('winter_test_roles', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -116,13 +119,14 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_users_roles', function($table)
+        Schema::create('winter_test_users_roles', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('user_id')->unsigned();
             $table->integer('role_id')->unsigned();
             $table->primary(['user_id', 'role_id']);
             $table->string('clearance_level')->nullable();
+            $table->integer('manager_id')->unsigned()->nullable();
             $table->boolean('is_executive')->default(false);
             $table->timestamps();
         });
@@ -131,7 +135,7 @@ class CreateTables extends Migration
          * Test 4: Countries
          */
 
-        Schema::create('october_test_countries', function($table)
+        Schema::create('winter_test_countries', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -147,7 +151,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_countries_types', function($table)
+        Schema::create('winter_test_countries_types', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('country_id')->unsigned();
@@ -159,7 +163,7 @@ class CreateTables extends Migration
          * Test 5: Reviews
          */
 
-        Schema::create('october_test_meta', function($table)
+        Schema::create('winter_test_meta', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -174,7 +178,7 @@ class CreateTables extends Migration
             $table->string('robot_follow')->nullable();
         });
 
-        Schema::create('october_test_reviews', function($table)
+        Schema::create('winter_test_reviews', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -185,7 +189,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_plugins', function($table)
+        Schema::create('winter_test_plugins', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -195,7 +199,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_themes', function($table)
+        Schema::create('winter_test_themes', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -209,7 +213,7 @@ class CreateTables extends Migration
          * Test 6: Trees
          */
 
-        Schema::create('october_test_members', function($table)
+        Schema::create('winter_test_members', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -219,7 +223,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_categories', function($table)
+        Schema::create('winter_test_categories', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -231,7 +235,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_channels', function($table)
+        Schema::create('winter_test_channels', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -245,7 +249,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_related_channels', function($table)
+        Schema::create('winter_test_related_channels', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('channel_id')->unsigned();
@@ -258,7 +262,7 @@ class CreateTables extends Migration
          * Test 7: Attributes
          */
 
-        Schema::create('october_test_attributes', function($table)
+        Schema::create('winter_test_attributes', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -275,7 +279,7 @@ class CreateTables extends Migration
          * Test 8: Galleries
          */
 
-        Schema::create('october_test_galleries', function($table)
+        Schema::create('winter_test_galleries', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -285,7 +289,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('october_test_gallery_entity', function($table) {
+        Schema::create('winter_test_gallery_entity', function($table) {
             $table->engine = 'InnoDB';
             $table->unsignedInteger('gallery_id')->index('gallery_id_idx');
             $table->unsignedInteger('entity_id')->index('entity_id_idx');
@@ -293,7 +297,7 @@ class CreateTables extends Migration
             $table->primary(['gallery_id', 'entity_id', 'entity_type'], 'gallery_entity_pk');
         });
 
-        Schema::create('october_test_pages', function($table)
+        Schema::create('winter_test_pages', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -304,13 +308,13 @@ class CreateTables extends Migration
         /**
          * Test 9: Locations
          */
-        Schema::create('october_test_cities', function ($table) {
+        Schema::create('winter_test_cities', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('country_id')->unsigned();
             $table->string('name');
         });
-        Schema::create('october_test_locations', function ($table) {
+        Schema::create('winter_test_locations', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('country_id')->unsigned();
@@ -321,31 +325,31 @@ class CreateTables extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('october_test_locations');
-        Schema::dropIfExists('october_test_cities');
-        Schema::dropIfExists('october_test_gallery_entity');
-        Schema::dropIfExists('october_test_galleries');
-        Schema::dropIfExists('october_test_comments');
-        Schema::dropIfExists('october_test_people');
-        Schema::dropIfExists('october_test_phones');
-        Schema::dropIfExists('october_test_countries');
-        Schema::dropIfExists('october_test_countries_types');
-        Schema::dropIfExists('october_test_plugins');
-        Schema::dropIfExists('october_test_reviews');
-        Schema::dropIfExists('october_test_posts');
-        Schema::dropIfExists('october_test_roles');
-        Schema::dropIfExists('october_test_people_roles');
-        Schema::dropIfExists('october_test_themes');
-        Schema::dropIfExists('october_test_users');
-        Schema::dropIfExists('october_test_users_roles');
-        Schema::dropIfExists('october_test_members');
-        Schema::dropIfExists('october_test_categories');
-        Schema::dropIfExists('october_test_channels');
-        Schema::dropIfExists('october_test_related_channels');
-        Schema::dropIfExists('october_test_meta');
-        Schema::dropIfExists('october_test_attributes');
-        Schema::dropIfExists('october_test_tags');
-        Schema::dropIfExists('october_test_posts_tags');
-        Schema::dropIfExists('october_test_pages');
+        Schema::dropIfExists('winter_test_locations');
+        Schema::dropIfExists('winter_test_cities');
+        Schema::dropIfExists('winter_test_gallery_entity');
+        Schema::dropIfExists('winter_test_galleries');
+        Schema::dropIfExists('winter_test_comments');
+        Schema::dropIfExists('winter_test_people');
+        Schema::dropIfExists('winter_test_phones');
+        Schema::dropIfExists('winter_test_countries');
+        Schema::dropIfExists('winter_test_countries_types');
+        Schema::dropIfExists('winter_test_plugins');
+        Schema::dropIfExists('winter_test_reviews');
+        Schema::dropIfExists('winter_test_posts');
+        Schema::dropIfExists('winter_test_roles');
+        Schema::dropIfExists('winter_test_people_roles');
+        Schema::dropIfExists('winter_test_themes');
+        Schema::dropIfExists('winter_test_users');
+        Schema::dropIfExists('winter_test_users_roles');
+        Schema::dropIfExists('winter_test_members');
+        Schema::dropIfExists('winter_test_categories');
+        Schema::dropIfExists('winter_test_channels');
+        Schema::dropIfExists('winter_test_related_channels');
+        Schema::dropIfExists('winter_test_meta');
+        Schema::dropIfExists('winter_test_attributes');
+        Schema::dropIfExists('winter_test_tags');
+        Schema::dropIfExists('winter_test_posts_tags');
+        Schema::dropIfExists('winter_test_pages');
     }
 }

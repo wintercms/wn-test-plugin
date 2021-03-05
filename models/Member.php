@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -8,12 +8,12 @@ use Model;
 class Member extends Model
 {
 
-    use \October\Rain\Database\Traits\SimpleTree;
+    use \Winter\Storm\Database\Traits\SimpleTree;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_members';
+    public $table = 'winter_test_members';
 
     /**
      * @var array Guarded fields
@@ -31,7 +31,7 @@ class Member extends Model
     public $hasOne = [];
     public $hasMany = [];
     public $belongsTo = [
-        'user' => 'October\Test\Models\User'
+        'user' => 'Winter\Test\Models\User'
     ];
     public $belongsToMany = [];
     public $morphTo = [];
@@ -42,7 +42,7 @@ class Member extends Model
 
     /**
      * Limit results to only records that are eligible to be parents of the provided model.
-     * Ineligible parents include: The provided model itself, models with the provided model 
+     * Ineligible parents include: The provided model itself, models with the provided model
      * as it's own parent already, and a model that is already the current model's parent
      *
      * @param Query $query

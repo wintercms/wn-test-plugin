@@ -28,7 +28,7 @@ fields:
                             action: show
                             field: ^type
                             condition: value[2]
-                        form: $/october/test/models/page/colors.yaml
+                        form: $/winter/test/models/page/colors.yaml
                     content:
                         label: Content
                         type: richeditor

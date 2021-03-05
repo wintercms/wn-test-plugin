@@ -1,4 +1,4 @@
-<?php namespace October\Test\FormWidgets;
+<?php namespace Winter\Test\FormWidgets;
 
 use Backend;
 use Carbon\Carbon;

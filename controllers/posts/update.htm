@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('october/test/posts') ?>">Posts</a></li>
+        <li><a href="<?= Backend::url('winter/test/posts') ?>">Posts</a></li>
         <li><?= e(trans($this->pageTitle)) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -43,7 +43,7 @@
                     data-handler="onLoadDeleteReasonForm">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('october/test/posts') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('winter/test/posts') ?>">Cancel</a>
                 </span>
             </div>
         </div>
@@ -53,6 +53,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e(trans($this->fatalError)) ?></p>
-    <p><a href="<?= Backend::url('october/test/posts') ?>" class="btn btn-default">Return to posts list</a></p>
+    <p><a href="<?= Backend::url('winter/test/posts') ?>" class="btn btn-default">Return to posts list</a></p>
 
 <?php endif ?>

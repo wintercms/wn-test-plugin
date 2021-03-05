@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -7,12 +7,12 @@ use Model;
  */
 class Plugin extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_plugins';
+    public $table = 'winter_test_plugins';
 
     /**
      * @var array Guarded fields
@@ -23,7 +23,7 @@ class Plugin extends Model
      * @var array Fillable fields
      */
     protected $fillable = [];
-    
+
     /**
      * Validation Rules.
      */
@@ -37,10 +37,10 @@ class Plugin extends Model
      * @var array Relations
      */
     public $morphMany = [
-        'reviews' => ['October\Test\Models\Review', 'name' => 'product'],
+        'reviews' => ['Winter\Test\Models\Review', 'name' => 'product'],
     ];
 
     public $morphOne = [
-        'meta' => ['October\Test\Models\Meta', 'name' => 'taggable'],
+        'meta' => ['Winter\Test\Models\Meta', 'name' => 'taggable'],
     ];
 }

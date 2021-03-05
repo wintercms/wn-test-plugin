@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/channel/columns.yaml
+list: $/winter/test/models/channel/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Channel
+modelClass: Winter\Test\Models\Channel
 
 # List Title
 title: Manage Channels
 
 # Link URL for each record
-recordUrl: october/test/channels/update/:id
+recordUrl: winter/test/channels/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

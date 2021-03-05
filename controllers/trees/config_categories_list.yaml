@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/category/columns.yaml
+list: $/winter/test/models/category/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Category
+modelClass: Winter\Test\Models\Category
 
 # List Title
 title: Manage Categories
 
 # Link URL for each record
-recordUrl: october/test/categories/update/:id
+recordUrl: winter/test/categories/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

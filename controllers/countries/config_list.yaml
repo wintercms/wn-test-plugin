@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: ~/plugins/october/test/models/country/columns.yaml
+list: ~/plugins/winter/test/models/country/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Country
+modelClass: Winter\Test\Models\Country
 
 # List Title
 title: Manage Countries
 
 # Link URL for each record
-recordUrl: october/test/countries/update/:id
+recordUrl: winter/test/countries/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

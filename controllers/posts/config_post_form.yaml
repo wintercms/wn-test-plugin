@@ -6,25 +6,25 @@
 name: Post
 
 # Model Form Field configuration
-form: ~/plugins/october/test/models/post/fields.yaml
+form: ~/plugins/winter/test/models/post/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Post
+modelClass: Winter\Test\Models\Post
 
 # Default redirect location
-defaultRedirect: october/test/posts
+defaultRedirect: winter/test/posts
 
 # Create page
 create:
     title: Create Posts
-    redirect: october/test/posts/update/:id
-    redirectClose: october/test/posts
+    redirect: winter/test/posts/update/:id
+    redirectClose: winter/test/posts
 
 # Update page
 update:
     title: Edit Posts
-    redirect: october/test/posts
-    redirectClose: october/test/posts
+    redirect: winter/test/posts
+    redirectClose: winter/test/posts
 
 # Preview page
 preview:

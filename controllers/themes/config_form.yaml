@@ -6,25 +6,25 @@
 name: Theme
 
 # Model Form Field configuration
-form: $/october/test/models/theme/fields.yaml
+form: $/winter/test/models/theme/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Theme
+modelClass: Winter\Test\Models\Theme
 
 # Default redirect location
-defaultRedirect: october/test/themes
+defaultRedirect: winter/test/themes
 
 # Create page
 create:
     title: Create Theme
-    redirect: october/test/themes/update/:id
-    redirectClose: october/test/themes
+    redirect: winter/test/themes/update/:id
+    redirectClose: winter/test/themes
 
 # Update page
 update:
     title: Edit Theme
-    redirect: october/test/themes
-    redirectClose: october/test/themes
+    redirect: winter/test/themes
+    redirectClose: winter/test/themes
 
 # Preview page
 preview:

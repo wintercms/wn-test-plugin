@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 use Cms\Classes\Page;
@@ -12,7 +12,7 @@ class Country extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_countries';
+    public $table = 'winter_test_countries';
 
     /**
      * @var array Guarded fields
@@ -34,8 +34,8 @@ class Country extends Model
      */
     public $belongsToMany = [
         'types' => [
-            'October\Test\Models\Attribute',
-            'table' => 'october_test_countries_types',
+            'Winter\Test\Models\Attribute',
+            'table' => 'winter_test_countries_types',
             'conditions' => "type = 'general.type'"
         ],
     ];
@@ -43,7 +43,7 @@ class Country extends Model
     /**
      * Softly implement the TranslatableModel behavior.
      */
-    public $implement = ['@RainLab.Translate.Behaviors.TranslatableModel'];
+    public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
 
     public $translatable = ['states', 'content'];
 

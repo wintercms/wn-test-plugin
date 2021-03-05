@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/plugin/columns.yaml
+list: $/winter/test/models/plugin/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Plugin
+modelClass: Winter\Test\Models\Plugin
 
 # List Title
 title: Manage Plugins
 
 # Link URL for each record
-recordUrl: october/test/plugins/update/:id
+recordUrl: winter/test/plugins/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

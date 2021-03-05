@@ -6,25 +6,25 @@
 name: Location
 
 # Model Form Field configuration
-form: $/october/test/models/location/fields.yaml
+form: $/winter/test/models/location/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Location
+modelClass: Winter\Test\Models\Location
 
 # Default redirect location
-defaultRedirect: october/test/locations
+defaultRedirect: winter/test/locations
 
 # Create page
 create:
     title: Create Location
-    redirect: october/test/locations/update/:id
-    redirectClose: october/test/locations
+    redirect: winter/test/locations/update/:id
+    redirectClose: winter/test/locations
 
 # Update page
 update:
     title: Edit Location
-    redirect: october/test/locations
-    redirectClose: october/test/locations
+    redirect: winter/test/locations
+    redirectClose: winter/test/locations
 
 # Preview page
 preview:

@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/member/columns.yaml
+list: $/winter/test/models/member/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Member
+modelClass: Winter\Test\Models\Member
 
 # List Title
 title: Manage Members
 
 # Link URL for each record
-recordUrl: october/test/members/update/:id
+recordUrl: winter/test/members/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
