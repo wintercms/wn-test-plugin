@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -8,13 +8,13 @@ use Model;
 class Category extends Model
 {
 
-    use \October\Rain\Database\Traits\Sortable;
-    use \October\Rain\Database\Traits\SimpleTree;
+    use \Winter\Storm\Database\Traits\Sortable;
+    use \Winter\Storm\Database\Traits\SimpleTree;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_categories';
+    public $table = 'winter_test_categories';
 
     /**
      * @var array Guarded fields

@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -10,7 +10,7 @@ class City extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_cities';
+    public $table = 'winter_test_cities';
 
     /*
      * Disable timestamps by default.

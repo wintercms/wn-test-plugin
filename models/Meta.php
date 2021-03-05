@@ -1,12 +1,12 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
 class Meta extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
-    
-    public $table = 'october_test_meta';
+    use \Winter\Storm\Database\Traits\Validation;
+
+    public $table = 'winter_test_meta';
 
     public $timestamps = false;
 
@@ -21,7 +21,7 @@ class Meta extends Model
         'canonical_url'    => 'url',
         'redirect_url'     => 'url'
     ];
-    
+
     public $fillable = [
         'meta_title',
         'meta_description',

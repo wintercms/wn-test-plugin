@@ -1,19 +1,19 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
-use October\Test\Models\Tag;
+use Winter\Test\Models\Tag;
 
 /**
  * Post Model
  */
 class Post extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_posts';
+    public $table = 'winter_test_posts';
 
     /**
      * @var array Guarded fields
@@ -41,29 +41,29 @@ class Post extends Model
      * @var array Relations
      */
     public $hasMany = [
-        'comments' => ['October\Test\Models\Comment', 'scope' => 'isVisible'],
-        'comments_count' => ['October\Test\Models\Comment', 'scope' => 'isVisible', 'count' => true]
+        'comments' => ['Winter\Test\Models\Comment', 'scope' => 'isVisible'],
+        'comments_count' => ['Winter\Test\Models\Comment', 'scope' => 'isVisible', 'count' => true]
     ];
 
     public $belongsTo = [
-        'status' => ['October\Test\Models\Attribute', 'conditions' => "type = 'general.status'"],
+        'status' => ['Winter\Test\Models\Attribute', 'conditions' => "type = 'general.status'"],
     ];
 
     public $belongsToMany = [
         'tags' => [
-            'October\Test\Models\Tag',
-            'table' => 'october_test_posts_tags',
+            'Winter\Test\Models\Tag',
+            'table' => 'winter_test_posts_tags',
             'key' => 'post_id',
             'otherKey' => 'tag_id'
         ]
     ];
 
     public $morphOne = [
-        'review' => ['October\Test\Models\Review', 'name' => 'product'],
+        'review' => ['Winter\Test\Models\Review', 'name' => 'product'],
     ];
 
     public $morphToMany = [
-        'galleries' => ['October\Test\Models\Gallery', 'name' => 'entity', 'table' => 'october_test_gallery_entity'],
+        'galleries' => ['Winter\Test\Models\Gallery', 'name' => 'entity', 'table' => 'winter_test_gallery_entity'],
     ];
 
     //

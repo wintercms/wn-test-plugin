@@ -1,6 +1,6 @@
 <?php
 
-namespace October\Test;
+namespace Winter\Test;
 
 use Backend;
 use System\Classes\PluginBase;
@@ -18,20 +18,20 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'October Tester',
+            'name'        => 'Winter Tester',
             'description' => 'Used for testing the Relation Controller behavior and others.',
             'author'      => 'Alexey Bobkov, Samuel Georges',
             'icon'        => 'icon-child',
-            'homepage'    => 'https://github.com/daftspunk/oc-test-plugin',
+            'homepage'    => 'https://github.com/wintercms/test-plugin',
         ];
     }
 
     public function registerPermissions()
     {
         return [
-            'october.test.access_plugin' => [
+            'winter.test.access_plugin' => [
                 'label' => 'Allow access to the plugin',
-                'tab' => 'October Tester',
+                'tab' => 'Winter Tester',
             ]
         ];
     }
@@ -41,61 +41,61 @@ class Plugin extends PluginBase
         return [
             'test' => [
                 'label'    => 'Playground',
-                'url'      => Backend::url('october/test/people'),
+                'url'      => Backend::url('winter/test/people'),
                 'icon'     => 'icon-child',
                 'order'    => 200,
-                'permissions' => ['october.test.access_plugin'],
+                'permissions' => ['winter.test.access_plugin'],
 
                 'sideMenu' => [
                     'people'    => [
                         'label' => 'People',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/people'),
+                        'url'   => Backend::url('winter/test/people'),
                     ],
                     'posts'     => [
                         'label' => 'Posts',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/posts'),
+                        'url'   => Backend::url('winter/test/posts'),
                     ],
                     'users'     => [
                         'label' => 'Users',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/users'),
+                        'url'   => Backend::url('winter/test/users'),
                     ],
                     'countries' => [
                         'label' => 'Countries',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/countries'),
+                        'url'   => Backend::url('winter/test/countries'),
                     ],
                     'reviews'   => [
                         'label' => 'Reviews',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/reviews'),
+                        'url'   => Backend::url('winter/test/reviews'),
                     ],
                     'galleries' => [
                         'label' => 'Galleries',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/galleries'),
+                        'url'   => Backend::url('winter/test/galleries'),
                     ],
                     'trees'     => [
                         'label' => 'Trees',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/trees'),
+                        'url'   => Backend::url('winter/test/trees'),
                     ],
                     'pages'     => [
                         'label' => 'Pages',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/pages'),
+                        'url'   => Backend::url('winter/test/pages'),
                     ],
                     'cities' => [
                         'label' => 'Cities',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/cities'),
+                        'url'   => Backend::url('winter/test/cities'),
                     ],
                     'locations' => [
                         'label' => 'Locations',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('october/test/locations'),
+                        'url'   => Backend::url('winter/test/locations'),
                     ],
                 ],
             ],
@@ -105,7 +105,7 @@ class Plugin extends PluginBase
     public function registerFormWidgets()
     {
         return [
-            'October\Test\FormWidgets\TimeChecker' => [
+            'Winter\Test\FormWidgets\TimeChecker' => [
                 'code' => 'timecheckertest',
             ],
         ];
@@ -115,9 +115,9 @@ class Plugin extends PluginBase
     {
         if (\App::runningInBackend()) {
             $pluginManager = \System\Classes\PluginManager::instance();
-            if ($pluginManager->hasPlugin('RainLab.Pages')) {
+            if ($pluginManager->hasPlugin('Winter.Pages')) {
                 \Event::listen('backend.form.extendFields', function ($widget) {
-                    if (get_class($widget->model) !== 'RainLab\Pages\Classes\Page') {
+                    if (get_class($widget->model) !== 'Winter\Pages\Classes\Page') {
                         return;
                     }
 

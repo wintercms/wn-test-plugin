@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -7,7 +7,7 @@ use Model;
  */
 class Page extends Model
 {
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /*
      * Disable timestamps by default.
@@ -19,7 +19,7 @@ class Page extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_pages';
+    public $table = 'winter_test_pages';
 
     public $jsonable = [
         'content'

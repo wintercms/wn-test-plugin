@@ -28,7 +28,7 @@ fields:
     status@recordfinder:
         label: Status
         type: recordfinder
-        list: $/october/test/models/attribute/columns.yaml
+        list: $/winter/test/models/attribute/columns.yaml
         nameFrom: name
         descriptionFrom: label
         span: auto

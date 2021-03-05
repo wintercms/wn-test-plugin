@@ -6,25 +6,25 @@
 name: Person
 
 # Model Form Field configuration
-form: ~/plugins/october/test/models/person/fields.yaml
+form: ~/plugins/winter/test/models/person/fields.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Person
+modelClass: Winter\Test\Models\Person
 
 # Default redirect location
-defaultRedirect: october/test/people
+defaultRedirect: winter/test/people
 
 # Create page
 create:
     title: Create People
-    redirect: october/test/people/update/:id
-    redirectClose: october/test/people
+    redirect: winter/test/people/update/:id
+    redirectClose: winter/test/people
 
 # Update page
 update:
     title: Edit People
-    redirect: october/test/people
-    redirectClose: october/test/people
+    redirect: winter/test/people
+    redirectClose: winter/test/people
 
 # Preview page
 preview:

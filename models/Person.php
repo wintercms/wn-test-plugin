@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -8,13 +8,13 @@ use Model;
 class Person extends Model
 {
 
-    use \October\Rain\Database\Traits\Nullable;
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Nullable;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_people';
+    public $table = 'winter_test_people';
 
     /**
      * @var array Guarded fields
@@ -52,8 +52,8 @@ class Person extends Model
      * @var array Relations
      */
     public $hasOne = [
-        'phone' => ['October\Test\Models\Phone', 'key' => 'person_id', 'scope' => 'isActive'],
-        'alt_phone' => ['October\Test\Models\Phone', 'key' => 'person_id']
+        'phone' => ['Winter\Test\Models\Phone', 'key' => 'person_id', 'scope' => 'isActive'],
+        'alt_phone' => ['Winter\Test\Models\Phone', 'key' => 'person_id']
     ];
 
 }

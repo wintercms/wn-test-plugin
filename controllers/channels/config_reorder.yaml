@@ -9,7 +9,7 @@ title: Reorder Channels
 nameFrom: title
 
 # Model Class name
-modelClass: October\Test\Models\Channel
+modelClass: Winter\Test\Models\Channel
 
 # Toolbar widget configuration
 toolbar:

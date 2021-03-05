@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/october/test/models/gallery/columns.yaml
+list: $/winter/test/models/gallery/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Gallery
+modelClass: Winter\Test\Models\Gallery
 
 # List Title
 title: Manage Galleries
 
 # Link URL for each record
-recordUrl: october/test/galleries/update/:id
+recordUrl: winter/test/galleries/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

@@ -1,4 +1,4 @@
-<?php namespace October\Test\Models;
+<?php namespace Winter\Test\Models;
 
 use Model;
 
@@ -8,12 +8,12 @@ use Model;
 class Phone extends Model
 {
 
-    use \October\Rain\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_phones';
+    public $table = 'winter_test_phones';
 
     /**
      * @var array Guarded fields
@@ -36,7 +36,7 @@ class Phone extends Model
      * @var array Relations
      */
     public $belongsTo = [
-        'person' => ['October\Test\Models\Person']
+        'person' => ['Winter\Test\Models\Person']
     ];
 
     public $attachOne = [

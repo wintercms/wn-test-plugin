@@ -1,9 +1,9 @@
 <?php
 
-namespace October\Test\Models;
+namespace Winter\Test\Models;
 
 use Model;
-use October\Rain\Database\Traits\Validation;
+use Winter\Storm\Database\Traits\Validation;
 
 class Gallery extends Model
 {
@@ -12,7 +12,7 @@ class Gallery extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'october_test_galleries';
+    public $table = 'winter_test_galleries';
 
     /**
      * @var array Guarded fields
@@ -35,9 +35,9 @@ class Gallery extends Model
      */
     public $morphedByMany = [
         'posts' => [
-            'October\Test\Models\Post',
+            'Winter\Test\Models\Post',
             'name' => 'entity',
-            'table' => 'october_test_gallery_entity'
+            'table' => 'winter_test_gallery_entity'
         ],
     ];
 

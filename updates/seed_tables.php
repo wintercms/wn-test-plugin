@@ -1,24 +1,23 @@
-<?php namespace October\Test\Updates;
+<?php namespace Winter\Test\Updates;
 
-use October\Test\Models\Page;
-use October\Test\Models\User;
-use October\Test\Models\Role;
-use October\Test\Models\Post;
-use October\Test\Models\Tag;
-use October\Test\Models\Phone;
-use October\Test\Models\Person;
-use October\Test\Models\Review;
-use October\Test\Models\Plugin;
-use October\Test\Models\Gallery;
-use October\Test\Models\Theme;
-use October\Test\Models\Country;
-use October\Test\Models\Channel;
-use October\Test\Models\Member;
-use October\Test\Models\Category;
-use October\Test\Models\Attribute;
-use October\Test\Models\City;
-use October\Test\Models\Location;
-use October\Rain\Database\Updates\Seeder;
+use Winter\Storm\Database\Updates\Seeder;
+use Winter\Test\Models\Attribute;
+use Winter\Test\Models\Category;
+use Winter\Test\Models\Channel;
+use Winter\Test\Models\City;
+use Winter\Test\Models\Country;
+use Winter\Test\Models\Gallery;
+use Winter\Test\Models\Location;
+use Winter\Test\Models\Member;
+use Winter\Test\Models\Page;
+use Winter\Test\Models\Person;
+use Winter\Test\Models\Phone;
+use Winter\Test\Models\Plugin;
+use Winter\Test\Models\Post;
+use Winter\Test\Models\Review;
+use Winter\Test\Models\Role;
+use Winter\Test\Models\Theme;
+use Winter\Test\Models\User;
 
 class SeedAllTables extends Seeder
 {
@@ -29,12 +28,12 @@ class SeedAllTables extends Seeder
          * Test 1: People
          */
 
-        $person = Person::create(['name' => 'Eddie Valiant', 'bio' => 'I have a phone set up already', 'expenses'=> 19999, 'favcolor' => '#5fb6f5']);
+        $person = Person::create(['name' => 'Eddie Valiant', 'bio' => 'I have a phone set up already', 'expenses' => 19999, 'favcolor' => '#5fb6f5']);
         $person->phone = Phone::create(['name' => 'Mobile', 'number' => '(360) 733-2263']);
         $person->alt_phone = Phone::create(['name' => 'Home', 'number' => '(360) 867-3563']);
         $person->save();
 
-        Person::create(['name' => 'Baby Herman', 'bio' => 'I have nothing at all', 'favcolor' => '#990000']);
+        Person::create(['name' => 'Baby Herman', 'bio' => 'I have nothing at all', 'expenses' => 550, 'favcolor' => '#990000']);
         Phone::create(['name' => 'Work', 'number' => '(360) 595-2146']);
         Phone::create(['name' => 'Fax', 'number' => '(360) 595-2146']);
         Phone::create(['name' => 'Inactive', 'number' => '(xxx) xxx-xxx', 'is_active' => false]);
@@ -42,24 +41,24 @@ class SeedAllTables extends Seeder
         Person::create(['name' => 'Jon Doe', 'bio' => 'I like turtles', 'favcolor' => '#111111']);
         Person::create(['name' => 'John Smith', 'bio' => 'I like dolphins', 'favcolor' => '#222222']);
         Person::create(['name' => 'Jon Smith', 'bio' => 'I like snakes', 'favcolor' => '#333333']);
-        Person::create(['name' => 'Mary Smith', 'bio' => 'I like fish', 'favcolor' => '#444444']);
+        Person::create(['name' => 'Mary Smith', 'bio' => 'I like fish', 'expenses' => 2000, 'favcolor' => '#444444']);
 
         /*
          * Test 2: Posts
          */
 
-        $post = Post::create(['name' => 'First post, yay!', 'content' => 'I have some comments!' ]);
-        Post::create(['name' => 'A lonely toon', 'content' => 'I have nothing at all' ]);
+        $post = Post::create(['name' => 'First post, yay!', 'content' => 'I have some comments!']);
+        Post::create(['name' => 'A lonely toon', 'content' => 'I have nothing at all']);
 
         $post->comments()->create([
             'name' => 'deadmau5',
-            'content' => 'Hai fwiend, hai fwiend, hai fwiend, hai fwiend, hai fwiend. Brrrrrup bloop. Brrrrrp bloop. Brrrrrp bloop. Brrrrrp bloop.'
+            'content' => 'Hai fwiend, hai fwiend, hai fwiend, hai fwiend, hai fwiend. Brrrrrup bloop. Brrrrrp bloop. Brrrrrp bloop. Brrrrrp bloop.',
         ]);
 
         $post->comments()->create([
             'name' => 'Hidden comment',
             'content' => 'This comment should be hidden as defined in the relationship.',
-            'is_visible' => false
+            'is_visible' => false,
         ]);
 
         /*
@@ -91,7 +90,7 @@ class SeedAllTables extends Seeder
                 ['title' => 'Chris'],
                 ['title' => 'Lois'],
                 ['title' => 'Meg'],
-            ]
+            ],
         ]);
 
         $country2 = Country::create([
@@ -104,7 +103,7 @@ class SeedAllTables extends Seeder
                 ['title' => 'Boaty'],
                 ['title' => 'McBoat'],
                 ['title' => 'Face'],
-            ]
+            ],
         ]);
 
         /*
@@ -168,7 +167,7 @@ class SeedAllTables extends Seeder
         $orange = Channel::create(['title' => 'Channel Orange', 'description' => 'A root level forum channel', 'user_id' => $user->id]);
         $autumn = $orange->children()->create(['title' => 'Autumn Leaves', 'description' => 'Disccusion about the season of falling leaves.']);
         $autumn->children()->create(['title' => 'September', 'description' => 'The start of the fall season.']);
-        $october = $autumn->children()->create(['title' => 'October', 'description' => 'The middle of the fall season.']);
+        $winter = $autumn->children()->create(['title' => 'Winter', 'description' => 'The middle of the fall season.']);
         $autumn->children()->create(['title' => 'November', 'description' => 'The end of the fall season.']);
         $orange->children()->create(['title' => 'Summer Breeze', 'description' => 'Disccusion about the wind at the ocean.']);
 
@@ -238,7 +237,7 @@ class SeedAllTables extends Seeder
                 'type' => 1,
                 'content' => [
                     'title' => 'This is a simple page',
-                    'content' => '<h1>Hello, World</h1>'
+                    'content' => '<h1>Hello, World</h1>',
                 ],
             ],
             [
@@ -248,15 +247,15 @@ class SeedAllTables extends Seeder
                     'title' => 'This is a complex page',
                     'content' => '<h1>Hello, Complex World</h1>',
                     'meta_description' => 'Meta Description',
-                    'meta_tags' => ['OctoberCMS', 'Fun'],
+                    'meta_tags' => ['WinterCMS', 'Fun'],
                     'colors' => [
                         'primary' => '#ff0000',
                         'secondary' => '#00ff00',
-                    ]
+                    ],
                 ],
             ],
         ];
-        foreach($pages as $page) {
+        foreach ($pages as $page) {
             Page::create($page);
         }
     }

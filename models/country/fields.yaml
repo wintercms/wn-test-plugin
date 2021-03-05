@@ -158,4 +158,4 @@ tabs:
             span: full
             type: repeater
 
-            groups: $/october/test/config/repeater_fields.yaml
+            groups: $/winter/test/config/repeater_fields.yaml

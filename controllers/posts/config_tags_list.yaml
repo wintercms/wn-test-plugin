@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: ~/plugins/october/test/models/tag/columns.yaml
+list: ~/plugins/winter/test/models/tag/columns.yaml
 
 # Model Class name
-modelClass: October\Test\Models\Tag
+modelClass: Winter\Test\Models\Tag
 
 # List Title
 title: Manage Tags
 
 # Link URL for each record
-# recordUrl: october/test/posts/update/:id
+# recordUrl: winter/test/posts/update/:id
 recordOnClick: "$.popup({ handler: 'onUpdateForm', extraData: { tag_mode: 1, record_id: ':id' } })"
 
 # Message to display if the list is empty

@@ -27,6 +27,7 @@ fields:
     ajax_options:
         label: AJAX Options
         comment: These options should be populated using AJAX
+        path: $/winter/test/controllers/people/_ajax_options.htm
         type: partial
 
     # Record Finder (Default)
@@ -35,7 +36,7 @@ fields:
         label: Record Finder
         comment: Record finder field.
         type: recordfinder
-        list: ~/plugins/october/test/models/phone/columns.yaml
+        list: ~/plugins/winter/test/models/phone/columns.yaml
         title: Please pick a phone
         prompt: Click the %s to find an alternative phone
         nameFrom: name
