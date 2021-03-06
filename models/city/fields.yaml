@@ -15,4 +15,4 @@ fields:
         label: Country
         type: relation
         span: right
-        
+
