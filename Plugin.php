@@ -20,7 +20,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'Winter Tester',
             'description' => 'Used for testing the Relation Controller behavior and others.',
-            'author'      => 'Alexey Bobkov, Samuel Georges',
+            'author'      => 'Winter CMS',
             'icon'        => 'icon-child',
             'homepage'    => 'https://github.com/wintercms/test-plugin',
         ];
