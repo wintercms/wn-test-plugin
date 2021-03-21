@@ -1,5 +1,5 @@
 {
-    "name": "wintercms/wn-test-plugin",
+    "name": "winter/wn-test-plugin",
     "type": "winter-plugin",
     "description": "Playground for Winter CMS",
     "homepage": "https://github.com/wintercms/wn-test-plugin",
