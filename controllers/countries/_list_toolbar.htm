@@ -9,7 +9,7 @@
             if (context.handler === 'onRedirectDownload') {
                 context.options.handleRedirectResponse = function (url) {
                     window.location.assign(url);
-                    $(event.target).trigger('ajaxDone');
+                    $(event.target).trigger('ajaxRedirected');
                 }
             }
         });
