@@ -225,12 +225,6 @@ class SeedAllTables extends Seeder
             Attribute::GENERAL_TYPE => $generalTypes,
         ];
 
-        foreach ($map as $type => $items) {
-            foreach ($items as $data) {
-                Attribute::create(array_merge($data, ['type' => $type]));
-            }
-        }
-
         $pages = [
             [
                 'id' => 1,
@@ -259,5 +253,4 @@ class SeedAllTables extends Seeder
             Page::create($page);
         }
     }
-
 }
