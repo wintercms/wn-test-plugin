@@ -1,8 +1,10 @@
-"1.0.1": 'First version of Test'
+"1.0.1": "First version of Test"
 "1.0.2":
-    - 'Create tables'
+    - "Create tables"
     - v1.0.2/create_tables.php
 "1.0.3":
-    - 'Seed tables'
+    - "Seed tables"
     - v1.0.3/seed_tables.php
-"2.0.0": Rebrand to Winter.Test
+"2.0.0": 
+    - "Rebrand to Winter.Test"
+    - v2.0.0/rename_tables.php
