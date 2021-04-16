@@ -1,7 +1,8 @@
-1.0.1: 'First version of Test'
-1.0.2:
+"1.0.1": 'First version of Test'
+"1.0.2":
     - 'Create tables'
-    - create_tables.php
-1.0.3:
+    - v1.0.2/create_tables.php
+"1.0.3":
     - 'Seed tables'
-    - seed_tables.php
+    - v1.0.3/seed_tables.php
+"2.0.0": Rebrand to Winter.Test

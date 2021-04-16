@@ -11,7 +11,7 @@ class CreateTables extends Migration
          * Test 1: People
          */
 
-        Schema::create('winter_test_people', function($table)
+        Schema::create('rainlab_test_people', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -29,7 +29,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_phones', function($table)
+        Schema::create('rainlab_test_phones', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -45,7 +45,7 @@ class CreateTables extends Migration
          * Test 2: Posts
          */
 
-        Schema::create('winter_test_posts', function($table)
+        Schema::create('rainlab_test_posts', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -63,7 +63,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_comments', function($table)
+        Schema::create('rainlab_test_comments', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -79,7 +79,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_tags', function($table)
+        Schema::create('rainlab_test_tags', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -87,7 +87,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_posts_tags', function($table)
+        Schema::create('rainlab_test_posts_tags', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('post_id');
@@ -99,7 +99,7 @@ class CreateTables extends Migration
          * Test 3: Users
          */
 
-        Schema::create('winter_test_users', function($table)
+        Schema::create('rainlab_test_users', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -110,7 +110,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_roles', function($table)
+        Schema::create('rainlab_test_roles', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -119,7 +119,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_users_roles', function($table)
+        Schema::create('rainlab_test_users_roles', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('user_id')->unsigned();
@@ -135,7 +135,7 @@ class CreateTables extends Migration
          * Test 4: Countries
          */
 
-        Schema::create('winter_test_countries', function($table)
+        Schema::create('rainlab_test_countries', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -151,7 +151,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_countries_types', function($table)
+        Schema::create('rainlab_test_countries_types', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('country_id')->unsigned();
@@ -163,7 +163,7 @@ class CreateTables extends Migration
          * Test 5: Reviews
          */
 
-        Schema::create('winter_test_meta', function($table)
+        Schema::create('rainlab_test_meta', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -178,7 +178,7 @@ class CreateTables extends Migration
             $table->string('robot_follow')->nullable();
         });
 
-        Schema::create('winter_test_reviews', function($table)
+        Schema::create('rainlab_test_reviews', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -189,7 +189,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_plugins', function($table)
+        Schema::create('rainlab_test_plugins', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -199,7 +199,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_themes', function($table)
+        Schema::create('rainlab_test_themes', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -213,7 +213,7 @@ class CreateTables extends Migration
          * Test 6: Trees
          */
 
-        Schema::create('winter_test_members', function($table)
+        Schema::create('rainlab_test_members', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -223,7 +223,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_categories', function($table)
+        Schema::create('rainlab_test_categories', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -235,7 +235,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_channels', function($table)
+        Schema::create('rainlab_test_channels', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -249,7 +249,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_related_channels', function($table)
+        Schema::create('rainlab_test_related_channels', function($table)
         {
             $table->engine = 'InnoDB';
             $table->integer('channel_id')->unsigned();
@@ -262,7 +262,7 @@ class CreateTables extends Migration
          * Test 7: Attributes
          */
 
-        Schema::create('winter_test_attributes', function($table)
+        Schema::create('rainlab_test_attributes', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -279,7 +279,7 @@ class CreateTables extends Migration
          * Test 8: Galleries
          */
 
-        Schema::create('winter_test_galleries', function($table)
+        Schema::create('rainlab_test_galleries', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -289,7 +289,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_gallery_entity', function($table) {
+        Schema::create('rainlab_test_gallery_entity', function($table) {
             $table->engine = 'InnoDB';
             $table->unsignedInteger('gallery_id')->index('gallery_id_idx');
             $table->unsignedInteger('entity_id')->index('entity_id_idx');
@@ -297,7 +297,7 @@ class CreateTables extends Migration
             $table->primary(['gallery_id', 'entity_id', 'entity_type'], 'gallery_entity_pk');
         });
 
-        Schema::create('winter_test_pages', function($table)
+        Schema::create('rainlab_test_pages', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -308,13 +308,13 @@ class CreateTables extends Migration
         /**
          * Test 9: Locations
          */
-        Schema::create('winter_test_cities', function ($table) {
+        Schema::create('rainlab_test_cities', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('country_id')->unsigned();
             $table->string('name');
         });
-        Schema::create('winter_test_locations', function ($table) {
+        Schema::create('rainlab_test_locations', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('country_id')->unsigned();
@@ -325,31 +325,31 @@ class CreateTables extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('winter_test_locations');
-        Schema::dropIfExists('winter_test_cities');
-        Schema::dropIfExists('winter_test_gallery_entity');
-        Schema::dropIfExists('winter_test_galleries');
-        Schema::dropIfExists('winter_test_comments');
-        Schema::dropIfExists('winter_test_people');
-        Schema::dropIfExists('winter_test_phones');
-        Schema::dropIfExists('winter_test_countries');
-        Schema::dropIfExists('winter_test_countries_types');
-        Schema::dropIfExists('winter_test_plugins');
-        Schema::dropIfExists('winter_test_reviews');
-        Schema::dropIfExists('winter_test_posts');
-        Schema::dropIfExists('winter_test_roles');
-        Schema::dropIfExists('winter_test_people_roles');
-        Schema::dropIfExists('winter_test_themes');
-        Schema::dropIfExists('winter_test_users');
-        Schema::dropIfExists('winter_test_users_roles');
-        Schema::dropIfExists('winter_test_members');
-        Schema::dropIfExists('winter_test_categories');
-        Schema::dropIfExists('winter_test_channels');
-        Schema::dropIfExists('winter_test_related_channels');
-        Schema::dropIfExists('winter_test_meta');
-        Schema::dropIfExists('winter_test_attributes');
-        Schema::dropIfExists('winter_test_tags');
-        Schema::dropIfExists('winter_test_posts_tags');
-        Schema::dropIfExists('winter_test_pages');
+        Schema::dropIfExists('rainlab_test_locations');
+        Schema::dropIfExists('rainlab_test_cities');
+        Schema::dropIfExists('rainlab_test_gallery_entity');
+        Schema::dropIfExists('rainlab_test_galleries');
+        Schema::dropIfExists('rainlab_test_comments');
+        Schema::dropIfExists('rainlab_test_people');
+        Schema::dropIfExists('rainlab_test_phones');
+        Schema::dropIfExists('rainlab_test_countries');
+        Schema::dropIfExists('rainlab_test_countries_types');
+        Schema::dropIfExists('rainlab_test_plugins');
+        Schema::dropIfExists('rainlab_test_reviews');
+        Schema::dropIfExists('rainlab_test_posts');
+        Schema::dropIfExists('rainlab_test_roles');
+        Schema::dropIfExists('rainlab_test_people_roles');
+        Schema::dropIfExists('rainlab_test_themes');
+        Schema::dropIfExists('rainlab_test_users');
+        Schema::dropIfExists('rainlab_test_users_roles');
+        Schema::dropIfExists('rainlab_test_members');
+        Schema::dropIfExists('rainlab_test_categories');
+        Schema::dropIfExists('rainlab_test_channels');
+        Schema::dropIfExists('rainlab_test_related_channels');
+        Schema::dropIfExists('rainlab_test_meta');
+        Schema::dropIfExists('rainlab_test_attributes');
+        Schema::dropIfExists('rainlab_test_tags');
+        Schema::dropIfExists('rainlab_test_posts_tags');
+        Schema::dropIfExists('rainlab_test_pages');
     }
 }
