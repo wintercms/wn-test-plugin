@@ -22,7 +22,7 @@ class Plugin extends PluginBase
             'description' => 'Used for testing the Relation Controller behavior and others.',
             'author'      => 'Winter CMS',
             'icon'        => 'icon-child',
-            'homepage'    => 'https://github.com/wintercms/test-plugin',
+            'homepage'    => 'https://github.com/wintercms/wn-test-plugin',
         ];
     }
 
