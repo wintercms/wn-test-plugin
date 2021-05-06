@@ -186,6 +186,7 @@ class CreateTables extends Migration
             $table->integer('product_id')->unsigned()->nullable();
             $table->text('content')->nullable();
             $table->boolean('is_positive')->nullable();
+            $table->integer('rating')->unsigned()->default(0);
             $table->timestamps();
         });
 
