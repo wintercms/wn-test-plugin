@@ -18,7 +18,3 @@ columns:
     is_visible:
         label: Visible
         type: switch
-
-    mood[feeling]:
-        label: Mood
-        type: selectable

@@ -12,6 +12,25 @@ fields:
         label: Positive
         type: checkbox
 
+    rating:
+        label: Rating
+        type: dropdown
+        options:
+            0: 0 stars
+            1: 1 star
+            2: 2 stars
+            3: 3 stars
+            4: 4 stars
+            5: 5 stars
+        span: left
+
+    _rating_display:
+        label: false
+        type: partial
+        path: $/winter/test/models/review/_rating_field.htm
+        dependsOn: rating
+        span: right
+
     _internal_comments:
         label: Internal comments
         type: textarea
