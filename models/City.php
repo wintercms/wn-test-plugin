@@ -7,6 +7,8 @@ use Model;
  */
 class City extends Model
 {
+    use \System\Traits\PropertyContainer;
+
     /**
      * @var string The database table used by the model.
      */
@@ -28,4 +30,16 @@ class City extends Model
      */
     public $hasMany = ['locations' => Location::class];
     public $belongsTo = ['country' => Country::class];
+
+    /**
+     * Gets values for the Inspector
+     *
+     * @return array
+     */
+    public function getPropertyOptions($property)
+    {
+        if ($property === 'linkedCities') {
+            return static::get()->pluck('name', 'id')->toArray();
+        }
+    }
 }

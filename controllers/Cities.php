@@ -8,6 +8,8 @@ use Backend\Classes\Controller;
  */
 class Cities extends Controller
 {
+    use \Backend\Traits\InspectableContainer;
+
     public $implement = [
         'Backend.Behaviors.FormController',
         'Backend.Behaviors.ListController'
@@ -21,5 +23,22 @@ class Cities extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Winter.Test', 'test', 'cities');
+    }
+
+    public function onGetInspectorConfiguration()
+    {
+        return [
+            'configuration' => [
+                'properties' => [
+                    [
+                        'property' => 'linkedCities',
+                        'title' => 'Surrounding cities',
+                        'type' => 'set',
+                    ]
+                ],
+                'title' => 'City information',
+                'description' => 'Describe this city with more additional information.',
+            ],
+        ];
     }
 }
