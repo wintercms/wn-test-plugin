@@ -35,7 +35,7 @@ class People extends Controller
     public function onSendTestEmail()
     {
         $data = ['msg' => 'Hello world'];
-        $recptFunc = function($message) {
+        $recptFunc = function ($message) {
             $message->to('admin@domain.tld');
             $message->subject('Test message');
         };

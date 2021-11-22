@@ -41,7 +41,8 @@ class Countries extends Controller
         return Backend::redirect('winter/test/countries/download');
     }
 
-    public function onRedirect() {
+    public function onRedirect()
+    {
         return Backend::redirect('winter/test/countries/preview/1');
     }
 

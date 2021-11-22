@@ -7,7 +7,6 @@ use Model;
  */
 class User extends Model
 {
-
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
@@ -81,9 +80,8 @@ class User extends Model
 
     public function scopeApplyRoleFilter($query, $filtered)
     {
-        return $query->whereHas('roles', function($q) use ($filtered) {
+        return $query->whereHas('roles', function ($q) use ($filtered) {
             $q->whereIn('id', $filtered);
         });
     }
-
 }

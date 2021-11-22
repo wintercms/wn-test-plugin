@@ -7,7 +7,6 @@ use Model;
  */
 class Category extends Model
 {
-
     use \Winter\Storm\Database\Traits\Sortable;
     use \Winter\Storm\Database\Traits\SimpleTree;
 
@@ -38,5 +37,4 @@ class Category extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
-
 }
