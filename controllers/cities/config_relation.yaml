@@ -1,0 +1,11 @@
+locations:
+    label: Locations
+    list: $/winter/test/models/location/columns.yaml
+    form: $/winter/test/models/location/fields.yaml
+    view:
+        toolbarButtons: create|delete
+        sortable: true
+        defaultSort:
+            column: sort_order
+            direction: asc
+

@@ -16,6 +16,9 @@ fields:
         type: relation
         span: right
 
+    locations:
+        type: partial
+
     _inspector:
         label: City information
         type: partial

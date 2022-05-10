@@ -8,11 +8,16 @@ use Model;
 class City extends Model
 {
     use \System\Traits\PropertyContainer;
+    use \Winter\Storm\Database\Traits\HasSortableRelations;
 
     /**
      * @var string The database table used by the model.
      */
     public $table = 'winter_test_cities';
+
+    public $sortableRelations = [
+        'locations' => 'sort_order',
+    ];
 
     /*
      * Disable timestamps by default.

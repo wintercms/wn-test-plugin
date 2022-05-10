@@ -12,11 +12,14 @@ class Cities extends Controller
 
     public $implement = [
         'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
+        'Backend.Behaviors.ListController',
+        'Backend.Behaviors.RelationController',
+        'Backend.Behaviors.ReorderRelationController',
     ];
 
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
+    public $relationConfig = 'config_relation.yaml';
 
     public function __construct()
     {
@@ -24,6 +27,13 @@ class Cities extends Controller
 
         BackendMenu::setContext('Winter.Test', 'test', 'cities');
     }
+
+    public function relationExtendManageWidget($widget, $field, $model)
+    {
+        if ($field === 'locations' && $widget->context === 'create') {
+            $widget->data->country_id = $model->country->id;
+        }
+   }
 
     public function onGetInspectorConfiguration()
     {

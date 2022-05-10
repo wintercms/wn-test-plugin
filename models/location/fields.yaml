@@ -5,4 +5,9 @@
 fields:
     id:
         label: ID
-        disabled: true
+        hidden: true
+    name:
+        label: Location name
+
+    country:
+        hidden: true

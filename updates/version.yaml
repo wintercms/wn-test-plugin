@@ -7,3 +7,6 @@
     - v1.0.3/seed_tables.php
 "2.0.0": 
     - "Rebrand to Winter.Test"
+"2.0.1":
+    - "Add Relation Reorder example"
+    - v2.0.1/modify_locations_table.php
