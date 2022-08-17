@@ -30,8 +30,6 @@ class Posts extends Controller
         'tags' => 'config_tags_list.yaml'
     ];
 
-    public $relationConfig = 'config_relation.yaml';
-
     public $requiredPermissions = ['winter.test.access_plugin'];
 
     public function __construct()

@@ -3,6 +3,7 @@
 namespace Winter\Test;
 
 use Backend;
+use Backend\Models\UserRole;
 use System\Classes\PluginBase;
 
 /**
@@ -32,7 +33,8 @@ class Plugin extends PluginBase
             'winter.test.access_plugin' => [
                 'label' => 'Allow access to the plugin',
                 'tab' => 'Winter Tester',
-            ]
+                'roles' => [UserRole::CODE_DEVELOPER],
+            ],
         ];
     }
 
