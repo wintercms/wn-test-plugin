@@ -7,7 +7,6 @@ use Winter\Storm\Database\Pivot;
  */
 class UserRolePivot extends Pivot
 {
-
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
@@ -16,5 +15,4 @@ class UserRolePivot extends Pivot
     public $rules = [
         'clearance_level' => 'required|min:3',
     ];
-
 }

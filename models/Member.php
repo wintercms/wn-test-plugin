@@ -7,7 +7,6 @@ use Model;
  */
 class Member extends Model
 {
-
     use \Winter\Storm\Database\Traits\SimpleTree;
 
     /**
@@ -53,7 +52,7 @@ class Member extends Model
     {
         $query
             ->where('id', '!=', $model->id)
-            ->where(function($query) use ($model) {
+            ->where(function ($query) use ($model) {
                 $query
                     ->where('parent_id', '!=', $model->id)
                     ->orWhereNull('parent_id')

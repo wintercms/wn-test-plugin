@@ -7,7 +7,6 @@ use Model;
  */
 class Person extends Model
 {
-
     use \Winter\Storm\Database\Traits\Nullable;
     use \Winter\Storm\Database\Traits\Validation;
 
@@ -55,5 +54,4 @@ class Person extends Model
         'phone' => ['Winter\Test\Models\Phone', 'key' => 'person_id', 'scope' => 'isActive'],
         'alt_phone' => ['Winter\Test\Models\Phone', 'key' => 'person_id']
     ];
-
 }

@@ -7,7 +7,6 @@ use Model;
  */
 class Role extends Model
 {
-
     /**
      * @var string The database table used by the model.
      */
@@ -33,5 +32,4 @@ class Role extends Model
     public $attachMany = [
         'photos' => ['System\Models\File'],
     ];
-
 }

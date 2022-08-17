@@ -137,8 +137,8 @@ class SeedAllTables extends Seeder
          * Test 5: Reviews
          */
 
-        Review::create(['content' => 'Orphan review', 'is_positive' => false]);
-        $review = Review::create(['content' => 'Excellent design work', 'is_positive' => true]);
+        Review::create(['content' => 'Orphan review', 'is_positive' => false, 'rating' => 2]);
+        $review = Review::create(['content' => 'Excellent design work', 'is_positive' => true, 'rating' => 4]);
 
         $theme = Theme::create(['name' => 'Bootstrap', 'code' => 'bootstrap', 'content' => 'A bootstrap theme.']);
         $theme->reviews()->add($review);
@@ -225,12 +225,6 @@ class SeedAllTables extends Seeder
             Attribute::GENERAL_TYPE => $generalTypes,
         ];
 
-        foreach ($map as $type => $items) {
-            foreach ($items as $data) {
-                Attribute::create(array_merge($data, ['type' => $type]));
-            }
-        }
-
         $pages = [
             [
                 'id' => 1,
@@ -259,5 +253,4 @@ class SeedAllTables extends Seeder
             Page::create($page);
         }
     }
-
 }
