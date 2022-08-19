@@ -58,6 +58,7 @@ class CreateTables extends Migration
             $table->timestamp('published_at')->nullable();
             $table->integer('status_id')->unsigned()->nullable()->index();
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
 
         Schema::create('winter_test_comments', function ($table) {

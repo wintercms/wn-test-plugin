@@ -21,3 +21,5 @@ columns:
         valueFrom: count
         default: 0
         type: number
+    deleted_at:
+        label: Deleted At
