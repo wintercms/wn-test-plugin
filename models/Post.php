@@ -8,6 +8,7 @@ use Winter\Test\Models\Tag;
  */
 class Post extends Model
 {
+    use \Winter\Storm\Database\Traits\SoftDelete;
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
@@ -41,7 +42,7 @@ class Post extends Model
      * @var array Relations
      */
     public $hasMany = [
-        'comments' => ['Winter\Test\Models\Comment', 'scope' => 'isVisible'],
+        'comments' => ['Winter\Test\Models\Comment', 'scope' => 'isVisible', 'delete' => true],
         'comments_count' => ['Winter\Test\Models\Comment', 'scope' => 'isVisible', 'count' => true]
     ];
 
