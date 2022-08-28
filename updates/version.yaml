@@ -5,5 +5,7 @@
 "1.0.3":
     - "Seed tables"
     - v1.0.3/seed_tables.php
-"2.0.0": 
+"2.0.0":
     - "Rebrand to Winter.Test"
+"2.0.1":
+    - "Add SoftDelete trait to Post model"
