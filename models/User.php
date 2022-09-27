@@ -14,6 +14,10 @@ class User extends Model
      */
     public $table = 'winter_test_users';
 
+    public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
+
+    public $translatable = ['media_image'];
+
     /**
      * @var array Guarded fields
      */
