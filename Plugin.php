@@ -104,6 +104,13 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerComponents(): array
+    {
+        return [
+            'Winter\Test\Components\TestInspector' => 'testInspector',
+        ];
+    }
+
     public function registerFormWidgets()
     {
         return [
