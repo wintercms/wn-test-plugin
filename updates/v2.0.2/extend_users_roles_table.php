@@ -9,7 +9,7 @@ class ExtendUsersRolesTable extends Migration
     {
         Schema::table('winter_test_users_roles', function($table)
         {
-            $table->json('awards')->nullable();
+            $table->text('awards')->nullable();
         });
 	}
     
