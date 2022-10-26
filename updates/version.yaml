@@ -9,3 +9,6 @@
     - "Rebrand to Winter.Test"
 "2.0.1":
     - "Add SoftDelete trait to Post model"
+"2.0.2":
+    - "Add an awards JSON field for UserRolePivot table"
+    - v2.0.2/extend_users_roles_table.php
