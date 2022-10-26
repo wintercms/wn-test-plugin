@@ -15,4 +15,10 @@ class UserRolePivot extends Pivot
     public $rules = [
         'clearance_level' => 'required|min:3',
     ];
+
+    /**
+     * @var array Attributes to be cast to JSON
+     */
+    protected $jsonable = ['awards'];
+
 }

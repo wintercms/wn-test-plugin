@@ -61,7 +61,7 @@ class User extends Model
         'roles_pivot_model' => [
             'Winter\Test\Models\Role',
             'table' => 'winter_test_users_roles',
-            'pivot' => ['clearance_level', 'is_executive'],
+            'pivot' => ['clearance_level', 'is_executive', 'awards'],
             'timestamps' => true,
             'pivotModel' => 'Winter\Test\Models\UserRolePivot',
         ],

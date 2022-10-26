@@ -11,3 +11,18 @@ fields:
         label: Executive
         type: checkbox
         span: auto
+
+    pivot[awards]:
+        label: Awards
+        type: repeater
+        span: full
+        form:
+            fields:
+                date:
+                    type: datepicker
+                    mode: date
+                    label: Date
+                    span: auto
+                title:
+                    label: Title
+                    span: auto
