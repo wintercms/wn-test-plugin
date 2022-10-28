@@ -10,6 +10,11 @@ class UserRolePivot extends Pivot
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
+     * @var string The database table used by the model.
+     */
+    public $table = 'winter_test_users_roles';
+
+    /**
      * @var array Rules
      */
     public $rules = [
