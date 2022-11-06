@@ -99,6 +99,11 @@ class Plugin extends PluginBase
                         'icon'  => 'icon-database',
                         'url'   => Backend::url('winter/test/locations'),
                     ],
+                    'vue' => [
+                        'label' => 'Vue',
+                        'icon'  => 'icon-cube',
+                        'url'   => Backend::url('winter/test/vue'),
+                    ],
                 ],
             ],
         ];
