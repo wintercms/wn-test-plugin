@@ -31,14 +31,14 @@ class Pages extends Controller
 
     public function create()
     {
-        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush';
+        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush breadcrumb-fancy';
 
         $this->asExtension('FormController')->create();
     }
 
     public function update($recordId)
     {
-        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush';
+        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush breadcrumb-fancy';
 
         $this->asExtension('FormController')->update($recordId);
     }
