@@ -31,7 +31,36 @@ class Cities extends Controller
                         'property' => 'linkedCities',
                         'title' => 'Surrounding cities',
                         'type' => 'set',
-                    ]
+                    ],
+                    [
+                        'property' => 'population',
+                        'title' => 'Population',
+                        'description' => 'This should be entered as a number',
+                        'type' => 'string',
+                        'placeholder' => 'Population amount',
+                    ],
+                    [
+                        'property' => 'density',
+                        'title' => 'Density',
+                        'type' => 'dropdown',
+                        'default' => 'medium',
+                        'options' => [
+                            'low' => 'Low',
+                            'medium' => 'Medium',
+                            'high' => 'High',
+                        ],
+                    ],
+                    [
+                        'property' => 'blurb',
+                        'title' => 'Blurb',
+                        'type' => 'text',
+                        'placeholder' => 'Describe this city with a small blurb',
+                    ],
+                    [
+                        'property' => 'capital',
+                        'title' => 'Capital city?',
+                        'type' => 'checkbox',
+                    ],
                 ],
                 'title' => 'City information',
                 'description' => 'Describe this city with more additional information.',
