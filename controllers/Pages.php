@@ -21,4 +21,25 @@ class Pages extends Controller
 
         BackendMenu::setContext('Winter.Test', 'test', 'pages');
     }
+
+    public function index()
+    {
+        $this->asExtension('ListController')->index();
+
+        $this->bodyClass = 'compact-container';
+    }
+
+    public function create()
+    {
+        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush';
+
+        $this->asExtension('FormController')->create();
+    }
+
+    public function update($recordId)
+    {
+        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush';
+
+        $this->asExtension('FormController')->update($recordId);
+    }
 }
