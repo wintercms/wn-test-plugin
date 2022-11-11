@@ -15,3 +15,6 @@
 "2.0.3":
     - "Add descriptive page columns"
     - v2.0.3/add_page_columns.php
+"2.0.4":
+    - "Add settings columns for pages"
+    - v2.0.4/add_page_settings_columns.php

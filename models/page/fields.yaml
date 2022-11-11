@@ -59,7 +59,6 @@ tabs:
                         content:
                             label: Content
                             type: richeditor
-                            size: huge
                             tab: Content
                         meta_description:
                             label: Description
@@ -78,3 +77,26 @@ tabs:
                                 action: show
                                 field: ^type
                                 condition: value[2]
+                secondaryTabs:
+                    fields:
+                        showTitle:
+                            label: Show title?
+                            type: checkbox
+                            span: left
+                            tab: Page Settings
+
+
+secondaryTabs:
+    paneCssClass:
+        0: padded-pane
+    fields:
+        enabled:
+            label: Enable access to page?
+            type: checkbox
+            span: left
+            tab: Settings
+        hidden:
+            label: Page hidden from navigation
+            type: checkbox
+            span: right
+            tab: Settings
