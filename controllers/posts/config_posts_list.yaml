@@ -42,3 +42,13 @@ toolbar:
     # Search widget configuration
     search:
         prompt: backend::lang.list.search_prompt
+
+filter:
+    scopes:
+        show_deleted:
+            label: Show deleted
+            type: checkbox
+            modelClass: Winter\Test\Models\Post
+            scope: withTrashed
+            default: 0
+

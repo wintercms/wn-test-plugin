@@ -11,8 +11,7 @@ class CreateTables extends Migration
          * Test 1: People
          */
 
-        Schema::create('winter_test_people', function($table)
-        {
+        Schema::create('winter_test_people', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -29,8 +28,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_phones', function($table)
-        {
+        Schema::create('winter_test_phones', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -45,8 +43,7 @@ class CreateTables extends Migration
          * Test 2: Posts
          */
 
-        Schema::create('winter_test_posts', function($table)
-        {
+        Schema::create('winter_test_posts', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -61,10 +58,10 @@ class CreateTables extends Migration
             $table->timestamp('published_at')->nullable();
             $table->integer('status_id')->unsigned()->nullable()->index();
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
 
-        Schema::create('winter_test_comments', function($table)
-        {
+        Schema::create('winter_test_comments', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -79,16 +76,14 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_tags', function($table)
-        {
+        Schema::create('winter_test_tags', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
             $table->timestamps();
         });
 
-        Schema::create('winter_test_posts_tags', function($table)
-        {
+        Schema::create('winter_test_posts_tags', function ($table) {
             $table->engine = 'InnoDB';
             $table->integer('post_id');
             $table->integer('tag_id');
@@ -99,8 +94,7 @@ class CreateTables extends Migration
          * Test 3: Users
          */
 
-        Schema::create('winter_test_users', function($table)
-        {
+        Schema::create('winter_test_users', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('username')->nullable();
@@ -110,8 +104,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_roles', function($table)
-        {
+        Schema::create('winter_test_roles', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -119,8 +112,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_users_roles', function($table)
-        {
+        Schema::create('winter_test_users_roles', function ($table) {
             $table->engine = 'InnoDB';
             $table->integer('user_id')->unsigned();
             $table->integer('role_id')->unsigned();
@@ -135,8 +127,7 @@ class CreateTables extends Migration
          * Test 4: Countries
          */
 
-        Schema::create('winter_test_countries', function($table)
-        {
+        Schema::create('winter_test_countries', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -151,8 +142,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_countries_types', function($table)
-        {
+        Schema::create('winter_test_countries_types', function ($table) {
             $table->engine = 'InnoDB';
             $table->integer('country_id')->unsigned();
             $table->integer('attribute_id')->unsigned();
@@ -163,8 +153,7 @@ class CreateTables extends Migration
          * Test 5: Reviews
          */
 
-        Schema::create('winter_test_meta', function($table)
-        {
+        Schema::create('winter_test_meta', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('taggable_id')->unsigned()->index()->nullable();
@@ -178,8 +167,7 @@ class CreateTables extends Migration
             $table->string('robot_follow')->nullable();
         });
 
-        Schema::create('winter_test_reviews', function($table)
-        {
+        Schema::create('winter_test_reviews', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('product_type')->nullable();
@@ -190,8 +178,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_plugins', function($table)
-        {
+        Schema::create('winter_test_plugins', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -200,8 +187,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_themes', function($table)
-        {
+        Schema::create('winter_test_themes', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('name')->nullable();
@@ -214,8 +200,7 @@ class CreateTables extends Migration
          * Test 6: Trees
          */
 
-        Schema::create('winter_test_members', function($table)
-        {
+        Schema::create('winter_test_members', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('parent_id')->unsigned()->index()->nullable();
@@ -224,8 +209,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_categories', function($table)
-        {
+        Schema::create('winter_test_categories', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('parent_id')->unsigned()->index()->nullable();
@@ -236,8 +220,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_channels', function($table)
-        {
+        Schema::create('winter_test_channels', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('parent_id')->unsigned()->index()->nullable();
@@ -250,8 +233,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_related_channels', function($table)
-        {
+        Schema::create('winter_test_related_channels', function ($table) {
             $table->engine = 'InnoDB';
             $table->integer('channel_id')->unsigned();
             $table->integer('related_id')->unsigned();
@@ -263,8 +245,7 @@ class CreateTables extends Migration
          * Test 7: Attributes
          */
 
-        Schema::create('winter_test_attributes', function($table)
-        {
+        Schema::create('winter_test_attributes', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('type')->nullable();
@@ -280,8 +261,7 @@ class CreateTables extends Migration
          * Test 8: Galleries
          */
 
-        Schema::create('winter_test_galleries', function($table)
-        {
+        Schema::create('winter_test_galleries', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
             $table->string('title')->nullable();
@@ -290,7 +270,7 @@ class CreateTables extends Migration
             $table->timestamps();
         });
 
-        Schema::create('winter_test_gallery_entity', function($table) {
+        Schema::create('winter_test_gallery_entity', function ($table) {
             $table->engine = 'InnoDB';
             $table->unsignedInteger('gallery_id')->index('gallery_id_idx');
             $table->unsignedInteger('entity_id')->index('entity_id_idx');
@@ -298,8 +278,7 @@ class CreateTables extends Migration
             $table->primary(['gallery_id', 'entity_id', 'entity_type'], 'gallery_entity_pk');
         });
 
-        Schema::create('winter_test_pages', function($table)
-        {
+        Schema::create('winter_test_pages', function ($table) {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
             $table->integer('type')->unsigned();

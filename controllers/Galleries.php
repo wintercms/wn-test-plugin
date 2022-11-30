@@ -9,14 +9,10 @@ use Backend\Classes\Controller;
 class Galleries extends Controller
 {
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController',
-        'Backend.Behaviors.RelationController',
+        \Backend\Behaviors\FormController::class,
+        \Backend\Behaviors\ListController::class,
+        \Backend\Behaviors\RelationController::class,
     ];
-
-    public $formConfig = 'config_form.yaml';
-    public $listConfig = 'config_list.yaml';
-    public $relationConfig = 'config_relation.yaml';
 
     public $requiredPermissions = ['winter.test.access_plugin'];
 

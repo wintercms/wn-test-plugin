@@ -1,55 +1,102 @@
 fields:
 
-    type:
-        label: Type
-        options:
-            1: Simple
-            2: Complex
-        span: full
-        type: dropdown
+    title:
+        label: Title
+        type: text
+        span: left
+        placeholder: Enter a title
 
-    content:
-        label: Content
-        span: full
-        type: nestedform
-        usePanelStyles: false
-        commentAbove: Everything below is a nested form, with styling disabled.
-        form:
-            tabs:
+    slug:
+        label: Slug
+        type: text
+        span: right
+        placeholder: Enter a slug
+        preset:
+            type: slug
+            field: title
+
+    toolbar:
+        label: false
+        type: partial
+        path: $/winter/test/models/page/_toolbar.htm
+
+tabs:
+    cssClass: master-area
+    fields:
+        type:
+            label: Type
+            options:
+                1: Simple
+                2: Complex
+            span: full
+            type: dropdown
+            tab: Page
+
+        content:
+            label: Content
+            span: full
+            type: nestedform
+            usePanelStyles: false
+            commentAbove: Everything below is a nested form, with styling disabled.
+            tab: Page
+            form:
                 fields:
                     title:
                         label: Title
                         type: text
-                        tab: Content
-                    colors:
-                        label: Colors
-                        type: nestedform
-                        tab: Content
-                        commentAbove: Colors are a nested form inside a nested form
-                        trigger:
-                            action: show
-                            field: ^type
-                            condition: value[2]
-                        form: $/winter/test/models/page/colors.yaml
-                    content:
-                        label: Content
-                        type: richeditor
-                        size: huge
-                        tab: Content
-                    meta_description:
-                        label: Description
-                        type: text
-                        tab: SEO
-                        trigger:
-                            action: show
-                            field: ^type
-                            condition: value[2]
-                    meta_tags:
-                        label: Tags
-                        type: taglist
-                        mode: array
-                        tab: SEO
-                        trigger:
-                            action: show
-                            field: ^type
-                            condition: value[2]
+                tabs:
+                    fields:
+                        colors:
+                            label: Colors
+                            type: nestedform
+                            tab: Content
+                            commentAbove: Colors are a nested form inside a nested form
+                            trigger:
+                                action: show
+                                field: ^type
+                                condition: value[2]
+                            form: $/winter/test/models/page/colors.yaml
+                        content:
+                            label: Content
+                            type: richeditor
+                            tab: Content
+                        meta_description:
+                            label: Description
+                            type: text
+                            tab: SEO
+                            trigger:
+                                action: show
+                                field: ^type
+                                condition: value[2]
+                        meta_tags:
+                            label: Tags
+                            type: taglist
+                            mode: array
+                            tab: SEO
+                            trigger:
+                                action: show
+                                field: ^type
+                                condition: value[2]
+                secondaryTabs:
+                    fields:
+                        showTitle:
+                            label: Show title?
+                            type: checkbox
+                            span: left
+                            tab: Page Settings
+
+
+secondaryTabs:
+    paneCssClass:
+        0: padded-pane
+    fields:
+        enabled:
+            label: Enable access to page?
+            type: checkbox
+            span: left
+            tab: Settings
+        hidden:
+            label: Page hidden from navigation
+            type: checkbox
+            span: right
+            tab: Settings

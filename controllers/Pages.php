@@ -9,12 +9,9 @@ use Backend\Classes\Controller;
 class Pages extends Controller
 {
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
+        \Backend\Behaviors\FormController::class,
+        \Backend\Behaviors\ListController::class,
     ];
-
-    public $formConfig = 'config_form.yaml';
-    public $listConfig = 'config_list.yaml';
 
     public $requiredPermissions = ['winter.test.access_plugin'];
 
@@ -23,5 +20,26 @@ class Pages extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Winter.Test', 'test', 'pages');
+    }
+
+    public function index()
+    {
+        $this->asExtension('ListController')->index();
+
+        $this->bodyClass = 'compact-container';
+    }
+
+    public function create()
+    {
+        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush breadcrumb-fancy';
+
+        $this->asExtension('FormController')->create();
+    }
+
+    public function update($recordId)
+    {
+        $this->bodyClass = 'fancy-layout compact-container breadcrumb-flush breadcrumb-fancy';
+
+        $this->asExtension('FormController')->update($recordId);
     }
 }

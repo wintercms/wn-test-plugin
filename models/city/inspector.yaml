@@ -1,0 +1,27 @@
+title: City information
+description: Describe this city with more additional information.
+
+fields:
+    linkedCities:
+        label: Linked cities
+        type: set
+    population:
+        label: Population
+        comment: This should be entered as a number
+        type: number
+        placeholder: Population amount
+    density:
+        label: Density
+        type: dropdown
+        default: medium
+        options:
+            low: Low
+            medium: Medium
+            high: High
+    blurb:
+        label: Blurb
+        type: text
+        placeholder: Enter a short blurb to describe the city
+    capital:
+        label: Capital city?
+        type: checkbox

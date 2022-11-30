@@ -16,11 +16,20 @@ fields:
             field: name
             type: slug
 
+    flags:
+        label: Flags (Static Fileupload Field)
+        type: fileupload
+        mode: image
+        span: full
+
     is_active:
         label: Active
         comment: Check this box to hide some tabs, using depends and trigger API.
         type: checkbox
+        span: left
         default: true
+        attributes:
+            onchange: "$(this).request('form::onRefresh');"
 
 tabs:
     lazy:
@@ -91,7 +100,6 @@ tabs:
                                     span: full
                                 safety:
                                     type: datatable
-                                    stretch: 1
                                     stretch: true
                                     dynamicHeight: true
                                     adding: true
@@ -148,5 +156,4 @@ tabs:
             prompt: Add content block
             span: full
             type: repeater
-
             groups: $/winter/test/config/repeater_fields.yaml

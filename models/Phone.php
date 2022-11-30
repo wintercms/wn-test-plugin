@@ -7,7 +7,6 @@ use Model;
  */
 class Phone extends Model
 {
-
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
@@ -61,5 +60,4 @@ class Phone extends Model
     {
         $query->where('name', $term);
     }
-
 }

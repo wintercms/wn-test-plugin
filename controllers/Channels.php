@@ -9,12 +9,9 @@ use Backend\Classes\Controller;
 class Channels extends Controller
 {
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ReorderController'
+        \Backend\Behaviors\FormController::class,
+        \Backend\Behaviors\ReorderController::class,
     ];
-
-    public $formConfig = 'config_form.yaml';
-    public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = ['winter.test.access_plugin'];
 

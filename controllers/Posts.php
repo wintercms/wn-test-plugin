@@ -2,6 +2,7 @@
 
 use BackendMenu;
 use Backend\Classes\Controller;
+use Winter\Test\Models\Post;
 
 /**
  * Posts [and Comments] Back-end Controller
@@ -29,8 +30,6 @@ class Posts extends Controller
         'comments' => 'config_comments_list.yaml',
         'tags' => 'config_tags_list.yaml'
     ];
-
-    public $relationConfig = 'config_relation.yaml';
 
     public $requiredPermissions = ['winter.test.access_plugin'];
 
@@ -114,5 +113,17 @@ class Posts extends Controller
     {
         $this->asExtension('FormController')->update_onDelete(post('record_id'));
         return array_merge($this->listRefresh('tags'), $this->listRefresh('comments'));
+    }
+
+    public function onPurgeDeleted()
+    {
+        # this does not delete the comments relation records
+        #Post::onlyTrashed()->with(['comments'])->forceDelete();
+
+        $trashedPosts = Post::onlyTrashed()->get();
+        foreach ($trashedPosts as $post) {
+            $post->forceDelete();
+        }
+        return $this->listRefresh('posts');
     }
 }

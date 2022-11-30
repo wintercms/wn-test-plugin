@@ -15,4 +15,8 @@ fields:
         label: Country
         type: relation
         span: right
-        
+
+    _inspector:
+        label: City information
+        type: partial
+        path: ~/plugins/winter/test/models/city/_inspector_field.htm

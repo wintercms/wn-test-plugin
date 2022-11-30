@@ -3,7 +3,14 @@ columns:
     id:
         label: id
         type: number
+        width: 40px
+
+    title:
+        label: Title
+        type: text
+        width: 25%
 
     content[title]:
         label: content
         type: text
+        width: 75%

@@ -7,13 +7,16 @@ use Model;
  */
 class User extends Model
 {
-
     use \Winter\Storm\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
     public $table = 'winter_test_users';
+
+    public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
+
+    public $translatable = ['media_image'];
 
     /**
      * @var array Guarded fields
@@ -58,7 +61,7 @@ class User extends Model
         'roles_pivot_model' => [
             'Winter\Test\Models\Role',
             'table' => 'winter_test_users_roles',
-            'pivot' => ['clearance_level', 'is_executive'],
+            'pivot' => ['clearance_level', 'is_executive', 'awards'],
             'timestamps' => true,
             'pivotModel' => 'Winter\Test\Models\UserRolePivot',
         ],
@@ -81,9 +84,8 @@ class User extends Model
 
     public function scopeApplyRoleFilter($query, $filtered)
     {
-        return $query->whereHas('roles', function($q) use ($filtered) {
+        return $query->whereHas('roles', function ($q) use ($filtered) {
             $q->whereIn('id', $filtered);
         });
     }
-
 }
