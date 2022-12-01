@@ -16,6 +16,60 @@ fields:
         type: number
         comment: This code should appear as a number.
 
+    my_title:
+        label: My title - issue 44 wn-translate
+        span: auto
+        placeholder: Hello world
+        comment: This field is ignored, no matter the value. It is always overridden by MY_REPEATER -> MY_TITLE (refresh after rename and save)
+
+    my_repeater:
+        label: My repeater - issue 44 wn-translate, 715 winter, 716 winter
+        span: auto
+        type: repeater
+        form:
+            fields:
+                my_random_field:
+                    label: Trigger issue 716
+                    type: checkbox
+                    
+                my_nested_form:
+                    label: Nested form
+                    type: nestedform
+                    usePanelStyles: false
+                    cssClass: my-nested-form-custom-css
+                    form:
+                        tabs:
+                            icons:
+                                Issue 44 TRANS: icon-keyboard
+                                Issue 715 WINTER: icon-list
+                                Issue 716 WINTER: icon-toggle-on
+                            fields:
+                                my_title:
+                                    tab: Issue 44 TRANS
+                                    label: My title
+                                    placeholder: Hello WinterCMS
+                                    span: auto
+                                    commentAbove: Note the language switcher in this field (refresh after rename and save)
+
+                                my_reorder_bug:
+                                    tab: Issue 715 WINTER
+                                    label: My reorder bug
+                                    type: repeater
+                                    commentAbove: Reordering the fields is not working (refresh after reorder and save)
+                                    form:
+                                        fields:
+                                            my_text:
+                                                type: text
+
+                                my_trigger_bug:
+                                    tab: Issue 716 WINTER
+                                    label: My trigger bug
+                                    commentAbove: Hidden when my_random_field is checked. No matter how many ^ I add, the trigger never happens
+                                    trigger:
+                                        action: hide
+                                        field: ^^^my_random_field
+                                        condition: checked
+
 tabs:
     fields:
 
