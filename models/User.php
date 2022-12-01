@@ -16,7 +16,7 @@ class User extends Model
 
     public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
 
-    public $translatable = ['media_image'];
+    public $translatable = ['media_image', 'my_title'];
 
     /**
      * @var array Guarded fields
@@ -27,6 +27,13 @@ class User extends Model
      * @var array Fillable fields
      */
     protected $fillable = [];
+
+    /**
+     * @var array Jsonable fields
+     */
+    protected $jsonable = [
+        'my_repeater'
+    ];
 
     /**
      * @var array Rules
