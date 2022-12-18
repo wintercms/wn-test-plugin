@@ -1,0 +1,467 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: 'winter.test::lang.models.general.name'
+        type: text
+        span: left
+    slug@create:
+        label: 'winter.test::lang.models.general.slug'
+        type: text
+        span: right
+        preset:
+            type: slug
+            field: name
+    slug:
+        label: 'winter.test::lang.models.general.slug'
+        type: text
+        context: [update, preview]
+        disabled: true
+        span: right
+
+    form_toolbar:
+        type: partial
+        span: full
+
+secondaryTabs:
+    icons:
+        'Basic Fields': 'icon-pencil'
+        'FormWidgets': 'icon-icons'
+        'Editors': 'icon-code'
+        'Data Structures': 'icon-rectangle-list'
+        'Repeater': 'icon-plus'
+        'Files': 'icon-file-circle-plus'
+        'Settings': 'icon-cog'
+
+    stretch: true
+    paneCssClass:
+        'Basic Fields': 'padded-pane'
+        'FormWidgets': 'padded-pane'
+        'Editors': 'padded-pane'
+        'Data Structures': 'padded-pane'
+        'Repeater': 'padded-pane'
+        'Files': 'padded-pane'
+        'Settings': 'padded-pane'
+
+    fields:
+        ##
+        ## Basic Fields
+        ##
+        _section_input:
+            tab: Basic Fields
+            label: Basic Input
+            commentAbove: Fields that accept user input as a value
+            type: section
+            span: full
+        additional_data[basic_fields][email]:
+            tab: Basic Fields
+            label: Email
+            type: email
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-email" target="_blank"><code>email</code></a> field
+            commentHtml: true
+            placeholder: email@example.com
+        additional_data[basic_fields][number]:
+            tab: Basic Fields
+            label: Number
+            type: number
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-number" target="_blank"><code>number</code></a> field
+            commentHtml: true
+            min: 0
+            max: 100
+            step: 1
+            default: 42
+        additional_data[basic_fields][password]:
+            tab: Basic Fields
+            label: Password
+            type: password
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-password" target="_blank"><code>password</code></a> field
+            commentHtml: true
+        additional_data[basic_fields][text]:
+            tab: Basic Fields
+            label: Text
+            type: text
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-text" target="_blank"><code>text</code></a> field
+            commentHtml: true
+        additional_data[basic_fields][textarea]:
+            tab: Basic Fields
+            label: Textarea
+            type: textarea
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-textarea" target="_blank"><code>textarea</code></a> field
+            commentHtml: true
+            size: small
+        additional_data[basic_fields][range]:
+            tab: Basic Fields
+            label: Range
+            type: range
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-range" target="_blank"><code>range</code></a> field
+            commentHtml: true
+
+        _section_optionable:
+            tab: Basic Fields
+            label: Optionable Fields
+            commentAbove: Fields that present a list of options using the <code>options</code> property for the user to select from
+            commentHtml: true
+            type: section
+            span: full
+        additional_data[basic_fields][checkboxlist]:
+            tab: Basic Fields
+            label: Checkbox List
+            type: checkboxlist
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-checkboxlist" target="_blank"><code>checkboxlist</code></a> field
+            commentHtml: true
+            options: [\Winter\Test\Models\Record, staticGetOptions]
+            default: option1
+        additional_data[basic_fields][radio]:
+            tab: Basic Fields
+            label: Radio
+            type: radio
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-radio" target="_blank"><code>radio</code></a> field
+            commentHtml: true
+            options: [\Winter\Test\Models\Record, staticGetOptions]
+            default: option2
+        additional_data[basic_fields][dropdown]:
+            tab: Basic Fields
+            label: Dropdown
+            type: dropdown
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-dropdown" target="_blank"><code>dropdown</code></a> field
+            commentHtml: true
+            options: [\Winter\Test\Models\Record, staticGetOptions]
+            default: option3
+        additional_data[basic_fields][balloon-selector]:
+            tab: Basic Fields
+            label: Balloon Selector
+            type: balloon-selector
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-balloon" target="_blank"><code>balloon-selector</code></a> field
+            commentHtml: true
+            options: [\Winter\Test\Models\Record, staticGetOptions]
+            default: option4
+
+        _section_boolean:
+            tab: Basic Fields
+            label: Boolean Fields
+            commentAbove: Fields that are either <code>true</code> or <code>false</code>
+            commentHtml: true
+            type: section
+            span: full
+        additional_data[basic_fields][checkbox]:
+            tab: Basic Fields
+            label: Checkbox
+            type: checkbox
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-checkbox" target="_blank"><code>checkbox</code></a> field
+            commentHtml: true
+        additional_data[basic_fields][switch]:
+            tab: Basic Fields
+            label: Switch
+            type: switch
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-switch" target="_blank"><code>switch</code></a> field
+            commentHtml: true
+            on: Yes
+            off: No
+
+        _section_presentation:
+            tab: Basic Fields
+            label: Presentational Fields
+            commentAbove: Fields that are used for injecting HTML / presentational content into the Form
+            type: section
+            span: full
+        additional_data[basic_fields][partial]:
+            tab: Basic Fields
+            label: Partial
+            type: partial
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-partial" target="_blank"><code>partial</code></a> field
+            commentHtml: true
+            path: $/winter/test/models/record/field.partial.php
+        additional_data[basic_fields][hint]:
+            tab: Basic Fields
+            label: Hint
+            type: hint
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-hint" target="_blank"><code>hint</code></a> field
+            commentHtml: true
+            path: $/winter/test/models/record/field.hint.php
+        additional_data[basic_fields][section]:
+            tab: Basic Fields
+            label: Section
+            type: section
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-section" target="_blank"><code>section</code></a> field
+            commentHtml: true
+
+        ##
+        ## FormWidgets
+        ##
+        _section_advanced_inputs:
+            tab: FormWidgets
+            label: Enhanced Inputs
+            commentAbove: FormWidgets that provide an enhanced experience for providing input
+            type: section
+            span: full
+        additional_data[formwidgets][sensitive]:
+            tab: FormWidgets
+            label: Sensitive
+            type: sensitive
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-sensitive" target="_blank"><code>sensitive</code></a> FormWidget
+            commentHtml: true
+        additional_data[formwidgets][taglist]:
+            tab: FormWidgets
+            label: Tag List
+            type: taglist
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-taglist" target="_blank"><code>taglist</code></a> FormWidget
+            commentHtml: true
+
+        _section_pickers:
+            tab: FormWidgets
+            label: '"Picker" widgets'
+            commentAbove: FormWidgets that are used to "pick" a valid value from a longer list of possible values
+            type: section
+            span: full
+        additional_data[formwidgets][colorpicker]:
+            tab: FormWidgets
+            label: Color Picker
+            type: colorpicker
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-colorpicker" target="_blank"><code>colorpicker</code></a> FormWidget
+            commentHtml: true
+        additional_data[formwidgets][datepicker]:
+            tab: FormWidgets
+            label: Date Picker
+            type: datepicker
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-datepicker" target="_blank"><code>datepicker</code></a> FormWidget
+            commentHtml: true
+        additional_data[formwidgets][iconpicker]:
+            tab: FormWidgets
+            label: Icon Picker
+            type: iconpicker
+            span: auto
+            commentAbove: Demonstration of an <a href="https://wintercms.com/docs/backend/forms/#widget-iconpicker" target="_blank"><code>iconpicker</code></a> FormWidget
+            commentHtml: true
+
+        _section_relations:
+            tab: FormWidgets
+            label: Relationships
+            commentAbove: FormWidgets that select related records
+            type: section
+            span: full
+        additional_data[formwidgets][recordfinder]:
+            tab: FormWidgets
+            label: Record Finder
+            type: recordfinder
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-recordfinder" target="_blank"><code>recordfinder</code></a> FormWidget
+            commentHtml: true
+            modelClass: Winter\Test\Models\City
+            useRelation: false
+            list: $/winter/test/models/city/columns.yaml
+        author:
+            tab: FormWidgets
+            label: Author (Relation)
+            type: relation
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-relation" target="_blank"><code>relation</code></a> FormWidget
+            commentHtml: true
+            nameFrom: username
+
+        ##
+        ## Editors
+        ##
+        _section_editors:
+            tab: Editors
+            label: Content Editors
+            commentAbove: FormWidgets that provide a rich experience for editing content
+            type: section
+            span: full
+        additional_data[formwidgets][richeditor]:
+            tab: Editors
+            label: Rich Editor (Froala)
+            type: richeditor
+            span: full
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-richeditor" target="_blank"><code>richeditor</code></a> FormWidget
+            commentHtml: true
+        additional_data[formwidgets][markdown]:
+            tab: Editors
+            label: Markdown Editor
+            type: markdown
+            span: full
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-markdowneditor" target="_blank"><code>markdown</code></a> FormWidget
+            commentHtml: true
+            mode: split
+        additional_data[formwidgets][codeeditor]:
+            tab: Editors
+            label: Code Editor
+            type: codeeditor
+            span: full
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-codeeditor" target="_blank"><code>codeeditor</code></a> FormWidget
+            commentHtml: true
+
+
+        _section_complex:
+            tab: Data Structures
+            label: Complex Data Structures
+            commentAbove: FormWidgets that provide advanced editing of complex, nested data.
+            type: section
+            span: full
+        additional_data[formwidgets][datatable]:
+            tab: Data Structures
+            label: Data Table
+            type: datatable
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-datatable" target="_blank"><code>datatable</code></a> FormWidget
+            commentHtml: true
+            columns:
+                name:
+                    type: string
+                    title: Name
+                content:
+                    type: string
+                    title: Content
+        additional_data[formwidgets][repeater]:
+            tab: Data Structures
+            label: Repeater
+            type: repeater
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-repeater" target="_blank"><code>repeater</code></a> FormWidget
+            commentHtml: true
+            form:
+                fields:
+                    name:
+                        label: 'winter.test::lang.models.general.name'
+                        type: text
+                        span: auto
+                    content:
+                        label: 'winter.test::lang.models.general.content'
+                        type: text
+                        span: auto
+        additional_data[formwidgets][nestedform]:
+            tab: Data Structures
+            label: Nested Form
+            type: nestedform
+            span: full
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-nestedform" target="_blank"><code>nestedform</code></a> FormWidget
+            commentHtml: true
+            form:
+                fields:
+                    name:
+                        label: 'winter.test::lang.models.general.name'
+                        type: text
+                        span: full
+                    content:
+                        label: 'winter.test::lang.models.general.content'
+                        type: textarea
+                        span: full
+                        size: tiny
+
+        ##
+        ## Repeater
+        ##
+        content:
+            type: repeater
+            span: full
+            tab: Repeater
+            form:
+                fields:
+                    data:
+                        label: Nested Form
+                        type: nestedform
+                        form:
+                            fields:
+                                name:
+                                    label: 'winter.test::lang.models.general.name'
+                                    type: text
+                                    span: full
+                                    commentHtml: true
+                                    comment: Test for <a href="https://github.com/wintercms/wn-translate-plugin/issues/44">Winter.Translate#44</a>, translatable root attributes are being marked translatable in nestedform widgets.
+                                content:
+                                    label: 'winter.test::lang.models.general.content'
+                                    type: textarea
+                                    span: full
+                                    size: huge
+
+        ##
+        ## Files
+        ##
+        featured_image:
+            label: Featured Image (FileUpload - AttachOne - public)
+            commentAbove: Only allows image uploads and auto resizes to 300x200px
+            tab: Files
+            span: left
+            type: fileupload
+            mode: image
+            imageWidth: 300
+            imageHeight: 200
+        pdf:
+            label: PDF (FileUpload - AttachOne - public)
+            commentAbove: Only allows .pdf uploads
+            tab: Files
+            span: right
+            type: fileupload
+            mode: file
+            fileTypes: pdf
+        private_images:
+            label: Private Images (FileUpload - AttachMany - private)
+            commentAbove: Images that are only accessibly by authenticated backend users, stored in the protected directory
+            tab: Files
+            span: left
+            type: fileupload
+            mode: image
+        private_files:
+            label: Private Files (FileUpload - AttachMany - private)
+            commentAbove: Files that are only accessibly by authenticated backend users, stored in the protected directory
+            tab: Files
+            span: right
+            type: fileupload
+            mode: file
+        additional_data[formwidgets][mediafinder][file]:
+            tab: Files
+            label: Media Finder (file)
+            type: mediafinder
+            span: auto
+            commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: file</code>'
+            commentHtml: true
+            mode: file
+        additional_data[formwidgets][mediafinder][image]:
+            tab: Files
+            label: Media Finder (image)
+            type: mediafinder
+            span: auto
+            commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: image</code>'
+            commentHtml: true
+            mode: image
+
+        ##
+        ## Settings
+        ##
+        status:
+            label: Status
+            tab: Settings
+            span: left
+            type: balloon-selector
+            default: draft
+        published_at:
+            label: Published At
+            tab: Settings
+            span: right
+            type: datepicker
+            mode: datetime
+            required: true # used because the validation rule is required_if
+            trigger:
+                field: status
+                condition: value[published]
+                action: show

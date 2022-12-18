@@ -49,7 +49,7 @@ class Country extends Model
      */
     public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
 
-    public $translatable = ['states', 'content'];
+    public $translatable = ['name', 'states', 'content'];
 
     public function filterFields($fields, $context = null)
     {

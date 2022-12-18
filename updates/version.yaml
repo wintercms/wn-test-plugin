@@ -18,3 +18,6 @@
 "2.0.4":
     - "Add settings columns for pages"
     - v2.0.4/add_page_settings_columns.php
+"2.1.0":
+    - "Add 'Records' section for testing of backend formwidgets"
+    - v2.1.0/create_records_table.php

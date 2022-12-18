@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'winter.test::lang.models.record.label'
+
+# Model Form Field configuration
+form: $/winter/test/models/record/fields.yaml
+
+# Model Class name
+modelClass: Winter\Test\Models\Record
+
+# Default redirect location
+defaultRedirect: winter/test/records
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: winter/test/records/update/:id
+    redirectClose: winter/test/records
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: winter/test/records
+    redirectClose: winter/test/records
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

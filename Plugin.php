@@ -49,55 +49,60 @@ class Plugin extends PluginBase
                 'permissions' => ['winter.test.access_plugin'],
 
                 'sideMenu' => [
+                    'cities' => [
+                        'label' => 'Cities',
+                        'icon'  => 'icon-city',
+                        'url'   => Backend::url('winter/test/cities'),
+                    ],
+                    'countries' => [
+                        'label' => 'Countries',
+                        'icon'  => 'icon-flag',
+                        'url'   => Backend::url('winter/test/countries'),
+                    ],
+                    'galleries' => [
+                        'label' => 'Galleries',
+                        'icon'  => 'icon-images',
+                        'url'   => Backend::url('winter/test/galleries'),
+                    ],
+                    'locations' => [
+                        'label' => 'Locations',
+                        'icon'  => 'icon-map-location-dot',
+                        'url'   => Backend::url('winter/test/locations'),
+                    ],
+                    'pages'     => [
+                        'label' => 'Pages',
+                        'icon'  => 'icon-file-lines',
+                        'url'   => Backend::url('winter/test/pages'),
+                    ],
                     'people'    => [
                         'label' => 'People',
-                        'icon'  => 'icon-database',
+                        'icon'  => 'icon-people-group',
                         'url'   => Backend::url('winter/test/people'),
                     ],
                     'posts'     => [
                         'label' => 'Posts',
-                        'icon'  => 'icon-database',
+                        'icon'  => 'icon-copy',
                         'url'   => Backend::url('winter/test/posts'),
                     ],
-                    'users'     => [
-                        'label' => 'Users',
+                    'records'   => [
+                        'label' => 'winter.test::lang.models.record.label_plural',
                         'icon'  => 'icon-database',
-                        'url'   => Backend::url('winter/test/users'),
-                    ],
-                    'countries' => [
-                        'label' => 'Countries',
-                        'icon'  => 'icon-database',
-                        'url'   => Backend::url('winter/test/countries'),
+                        'url'   => Backend::url('winter/test/records'),
                     ],
                     'reviews'   => [
                         'label' => 'Reviews',
-                        'icon'  => 'icon-database',
+                        'icon'  => 'icon-star-half-stroke',
                         'url'   => Backend::url('winter/test/reviews'),
-                    ],
-                    'galleries' => [
-                        'label' => 'Galleries',
-                        'icon'  => 'icon-database',
-                        'url'   => Backend::url('winter/test/galleries'),
                     ],
                     'trees'     => [
                         'label' => 'Trees',
-                        'icon'  => 'icon-database',
+                        'icon'  => 'icon-chart-gantt',
                         'url'   => Backend::url('winter/test/trees'),
                     ],
-                    'pages'     => [
-                        'label' => 'Pages',
-                        'icon'  => 'icon-database',
-                        'url'   => Backend::url('winter/test/pages'),
-                    ],
-                    'cities' => [
-                        'label' => 'Cities',
-                        'icon'  => 'icon-database',
-                        'url'   => Backend::url('winter/test/cities'),
-                    ],
-                    'locations' => [
-                        'label' => 'Locations',
-                        'icon'  => 'icon-database',
-                        'url'   => Backend::url('winter/test/locations'),
+                    'users'     => [
+                        'label' => 'Users',
+                        'icon'  => 'icon-users',
+                        'url'   => Backend::url('winter/test/users'),
                     ],
                 ],
             ],

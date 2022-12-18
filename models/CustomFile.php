@@ -15,7 +15,7 @@ class CustomFile extends FileBase
         return '/';
     }
 
-    protected function getLocalRootPath()
+    protected function getLocalRootPath(): string
     {
         return storage_path();
     }
