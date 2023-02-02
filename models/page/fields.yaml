@@ -58,7 +58,7 @@ tabs:
                             form: $/winter/test/models/page/colors.yaml
                         content:
                             label: Content
-                            type: richeditor
+                            type: visualeditor
                             tab: Content
                         meta_description:
                             label: Description

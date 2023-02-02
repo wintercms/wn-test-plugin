@@ -318,13 +318,14 @@ secondaryTabs:
             commentAbove: FormWidgets that provide advanced editing of complex, nested data.
             type: section
             span: full
-        additional_data[formwidgets][datatable]:
+        subrecords:
             tab: Data Structures
-            label: Data Table
+            label: Data Table (Client Datasource)
             type: datatable
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-datatable" target="_blank"><code>datatable</code></a> FormWidget
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-datatable" target="_blank"><code>datatable</code></a> FormWidget. Records are managed in the browser and stored within the model.
             commentHtml: true
+            useRelation: true
             columns:
                 name:
                     type: string
@@ -349,6 +350,21 @@ secondaryTabs:
                         label: 'winter.test::lang.models.general.content'
                         type: text
                         span: auto
+        _additional_data[formwidgets][datatable_server]:
+            tab: Data Structures
+            label: Data Table (Server Datasource)
+            type: datatable
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-datatable" target="_blank"><code>datatable</code></a> FormWidget. Records are managed through AJAX calls to the server, and stored in a related model.
+            commentHtml: true
+            dataSource: Winter\Test\Models\Record\RecordDataSource
+            columns:
+                name:
+                    type: string
+                    title: Name
+                content:
+                    type: string
+                    title: Content
         additional_data[formwidgets][nestedform]:
             tab: Data Structures
             label: Nested Form
