@@ -372,6 +372,7 @@ secondaryTabs:
         ## Repeater
         ##
         content:
+            label: Standard repeater
             type: repeater
             span: full
             tab: Repeater
@@ -393,6 +394,29 @@ secondaryTabs:
                                     type: textarea
                                     span: full
                                     size: huge
+        content_grid:
+            label: Grid repeater
+            type: repeater
+            mode: grid
+            columns: 4
+            rowHeight: 395
+            span: full
+            tab: Repeater
+            form:
+                fields:
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 300
+                        imageHeight: 200
+                    title:
+                        label: Title
+                        type: text
+                    description:
+                        label: Description
+                        type: textarea
+                        size: small
 
         ##
         ## Files
