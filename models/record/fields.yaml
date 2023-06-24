@@ -436,6 +436,14 @@ secondaryTabs:
             commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: file</code>'
             commentHtml: true
             mode: file
+        additional_data[formwidgets][mediafinder][document]:
+            tab: Files
+            label: Media Finder (document)
+            type: mediafinder
+            span: auto
+            commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: document</code>'
+            commentHtml: true
+            mode: document
         additional_data[formwidgets][mediafinder][image]:
             tab: Files
             label: Media Finder (image)
@@ -444,6 +452,30 @@ secondaryTabs:
             commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: image</code>'
             commentHtml: true
             mode: image
+        additional_data[formwidgets][mediafinder][audio]:
+            tab: Files
+            label: Media Finder (audio)
+            type: mediafinder
+            span: auto
+            commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: audio</code>'
+            commentHtml: true
+            mode: audio
+        additional_data[formwidgets][mediafinder][video]:
+            tab: Files
+            label: Media Finder (video)
+            type: mediafinder
+            span: auto
+            commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: video</code>'
+            commentHtml: true
+            mode: video
+        additional_data[formwidgets][mediafinder][all]:
+            tab: Files
+            label: Media Finder (all)
+            type: mediafinder
+            span: auto
+            commentAbove: 'Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-mediafinder" target="_blank"><code>mediafinder</code></a> FormWidget with <code>mode: all</code>'
+            commentHtml: true
+            mode: all
 
         ##
         ## Settings
