@@ -497,3 +497,11 @@ secondaryTabs:
                 field: status
                 condition: value[published]
                 action: show
+
+        ##
+        ## Groups
+        ##
+        blocks:
+            tab: Blocks
+            type: repeater
+            groups: ~/plugins/aic/demo/models/issues/blocks.yaml
