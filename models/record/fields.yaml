@@ -504,4 +504,4 @@ secondaryTabs:
         blocks:
             tab: Blocks
             type: repeater
-            groups: ~/plugins/aic/demo/models/issues/blocks.yaml
+            groups: ~/plugins/winter/wn-test-plugin/models/record/blocks.yaml
