@@ -1,0 +1,50 @@
+block_test:
+    name: Test
+    icon: icon-bars
+    fields:
+        is_delayed:
+            label: (un)tick this, check the field in repeater
+            type: checkbox
+        trigger:
+            type: repeater
+            form:
+                fields:
+                    works:
+                        label: Works
+                        trigger:
+                            action: hide
+                            field: ^is_delayed
+                            condition: checked
+                        span: auto
+                    myForm:
+                        type: nestedform
+                        form:
+                            fields:
+                                does_not_work:
+                                    label: Does not work
+                                    trigger:
+                                        action: hide
+                                        field: is_delayed
+                                        condition: checked
+
+                                does_not_work1:
+                                    label: Does not work
+                                    trigger:
+                                        action: hide
+                                        field: ^is_delayed
+                                        condition: checked
+
+                                does_not_work2:
+                                    label: Does not work
+                                    trigger:
+                                        action: hide
+                                        field: ^^is_delayed
+                                        condition: checked
+
+                                does_not_work3:
+                                    label: Does not work
+                                    trigger:
+                                        action: hide
+                                        field: ^^^is_delayed
+                                        condition: checked
+                        span: auto

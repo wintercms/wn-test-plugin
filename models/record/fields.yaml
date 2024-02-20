@@ -497,3 +497,11 @@ secondaryTabs:
                 field: status
                 condition: value[published]
                 action: show
+
+        ##
+        ## Groups
+        ##
+        blocks:
+            tab: Blocks
+            type: repeater
+            groups: ~/plugins/winter/wn-test-plugin/models/record/blocks.yaml
