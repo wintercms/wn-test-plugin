@@ -1,0 +1,4 @@
+cities:
+    label: City
+    list: ~/plugins/winter/test/models/city/columns.yaml
+    form: ~/plugins/winter/test/models/city/fields.yaml

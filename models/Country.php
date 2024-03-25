@@ -39,9 +39,21 @@ class Country extends Model
             'conditions' => "type = 'general.type'"
         ],
     ];
+
     public $attachMany = [
         'flags' => ['System\Models\File'],
         'dynamic_flags' => ['System\Models\File'],
+    ];
+
+    public $hasMany = [
+        'cities' => City::class,
+    ];
+
+    public $hasManyThrough = [
+        'sites' => [
+            Location::class,
+            'through' => City::class,
+        ],
     ];
 
     /**

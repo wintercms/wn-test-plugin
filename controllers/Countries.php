@@ -14,6 +14,7 @@ class Countries extends Controller
     public $implement = [
         \Backend\Behaviors\FormController::class,
         \Backend\Behaviors\ListController::class,
+        \Backend\Behaviors\RelationController::class,
     ];
 
     public $requiredPermissions = ['winter.test.access_plugin'];
@@ -82,4 +83,24 @@ class Countries extends Controller
             }
         }
     }
+
+    public function relationExtendViewWidget($widget, $field, $model)
+    {
+        if ($field === 'cities') {
+            $widget->bindEvent('list.extendColumns', function () use ($widget, $model) {
+                $widget->removeColumn('country_name');
+            });
+        }
+    }
+
+    public function relationExtendManageWidget($widget, $field, $model)
+    {
+        if ($field === 'cities') {
+            $widget->bindEvent('form.extendFields', function () use ($widget, $model) {
+                $widget->removeField('country');
+                $widget->removeField('_inspector');
+            });
+        }
+    }
+
 }

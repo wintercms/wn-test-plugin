@@ -83,6 +83,10 @@ tabs:
                 condition: value[error]
                 action: hide
 
+        cities:
+            tab: Cities
+            type: partial
+
         states:
             tab: States
             type: repeater
