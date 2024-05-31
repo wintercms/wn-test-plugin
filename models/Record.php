@@ -65,6 +65,7 @@ class Record extends Model
      */
     protected $jsonable = [
         'content',
+        'content_grid',
         'additional_data',
     ];
 

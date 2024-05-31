@@ -21,3 +21,6 @@
 "2.1.0":
     - "Add 'Records' section for testing of backend formwidgets"
     - v2.1.0/create_records_table.php
+"2.1.1":
+    - "Add example of Repeater Grid"
+    - v2.1.1/add_content_grid_to_records.php
