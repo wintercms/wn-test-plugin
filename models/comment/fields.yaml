@@ -85,6 +85,19 @@ tabs:
             type: text
             tab: Mood
 
+        mood[table]:
+            label: Mood comment
+            span: auto
+            type: datatable
+            tab: Mood
+            columns:
+                field1:
+                    title: Code
+                field2:
+                    title: Title
+                field3:
+                    title: Title
+
         quotes:
             label: Quotes
             type: datatable
