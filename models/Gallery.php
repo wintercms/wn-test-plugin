@@ -28,6 +28,7 @@ class Gallery extends Model
 
     public $rules = [
         'title' => 'required|between:3,255',
+        'party_mode' => 'required_if:status,active',
     ];
 
     /**
@@ -44,4 +45,15 @@ class Gallery extends Model
     public $attachMany = [
         'images' => 'System\Models\File',
     ];
+
+    public function filterFields($fields, $context)
+    {
+        if (isset($fields->status) && isset($fields->party_mode)) {
+            if ($fields->status->value === 'active') {
+                $fields->party_mode->hidden = false;
+            } else {
+                $fields->party_mode->hidden = true;
+            }
+        }
+    }
 }

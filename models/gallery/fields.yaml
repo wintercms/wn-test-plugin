@@ -22,10 +22,8 @@ fields:
         type: checkbox
         attributes:
             required: 1
-        trigger:
-            field: status
-            condition: value[active]
-            action: show|enable
+        required: true
+        dependsOn: status
 
 tabs:
     fields:
