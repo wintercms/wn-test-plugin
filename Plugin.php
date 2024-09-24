@@ -106,6 +106,12 @@ class Plugin extends PluginBase
                     ],
                 ],
             ],
+            'workbench' => [
+                'label'    => 'Workbench',
+                'url'      => Backend::url('winter/test/workbench'),
+                'icon'     => 'icon-wrench',
+                'order'    => 201,
+            ],
         ];
     }
 

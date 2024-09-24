@@ -1,0 +1,30 @@
+## Defines the title for the Workbench
+title: 'Test Workbench'
+
+## Defines the title template to use for Workbench actions
+titleTemplate: '%s | Test Workbench'
+
+sections:
+    cities:
+        modelClass: Winter\Test\Models\City
+
+        nav:
+            icon: city
+
+        list:
+            title: Cities
+            mode: list
+            multiselect: true
+            toolbar:
+                search: true
+                reorder:
+                    - label: Name
+                      column: name
+                delete: true
+            item:
+                title: name
+                description: country.name
+                action: edit
+                sort:
+                    column: name
+                    direction: asc
