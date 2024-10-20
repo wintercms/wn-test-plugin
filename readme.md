@@ -1,6 +1,22 @@
 # Test Plugin
 
-This is a UI test plugin for Winter CMS. Extract this archive to `/plugins/winter/test` and click on **Playground** in the back-end area. If the backend dashboard is open already, you have to sign out and sign in again for the plugin tables to be created.
+UI test plugin for Winter CMS, provides many different sample records and backend interfaces for testing the UI interactions and functionality in the Winter CMS backend.
+
+## Installation
+
+This plugin is available for installation via [Composer](http://getcomposer.org/).
+
+```bash
+composer require winter/wn-test-plugin
+```
+
+After installing the plugin you will need to run the migrations and (if you are using a [public folder](https://wintercms.com/docs/develop/docs/setup/configuration#using-a-public-folder)) [republish your public directory](https://wintercms.com/docs/develop/docs/console/setup-maintenance#mirror-public-files).
+
+```bash
+php artisan migrate
+```
+
+## Functionality
 
 The following sections are explored, tested and demonstrated along with a list of the features used:
 
