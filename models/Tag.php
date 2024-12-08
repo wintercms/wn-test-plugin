@@ -47,4 +47,8 @@ class Tag extends Model
             'otherKey' => 'post_id'
         ]
     ];
+
+    public $morphTo = [
+        'taggable' => [],
+    ];
 }

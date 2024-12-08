@@ -106,6 +106,14 @@ class Record extends Model
         ],
     ];
 
+    public $hasMany = [
+        'tags' => ['Winter\Test\Models\Tag', 'delete' => true],
+    ];
+
+    public $morphMany = [
+        'morphed_tags' => ['Winter\Test\Models\Tag', 'name' => 'taggable', 'delete' => true],
+    ];
+
     /**
      * Hook that runs before the model is validated
      */

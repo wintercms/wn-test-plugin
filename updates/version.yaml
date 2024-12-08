@@ -24,3 +24,6 @@
 "2.1.1":
     - "Add example of Repeater Grid"
     - v2.1.1/add_content_grid_to_records.php
+"2.1.2":
+    - "Add example of tags in relation mode for hasMany/morphMany relation types"
+    - v2.1.2/add_tags_foreign_keys.php
