@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'winter.test::lang.models.event.label'
+
+# Model Form Field configuration
+form: $/winter/test/models/event/fields.yaml
+
+# Model Class name
+modelClass: Winter\Test\Models\Event
+
+# Default redirect location
+defaultRedirect: winter/test/events
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: winter/test/events/update/:id
+    redirectClose: winter/test/events
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: winter/test/events
+    redirectClose: winter/test/events
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
