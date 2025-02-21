@@ -59,6 +59,11 @@ class Plugin extends PluginBase
                         'icon'  => 'icon-flag',
                         'url'   => Backend::url('winter/test/countries'),
                     ],
+                    'calendar' => [
+                        'label' => 'Calendar',
+                        'icon'  => 'icon-calendar',
+                        'url'   => Backend::url('winter/test/events/calendar'),
+                    ],
                     'galleries' => [
                         'label' => 'Galleries',
                         'icon'  => 'icon-images',
