@@ -360,6 +360,9 @@ secondaryTabs:
                         label: 'winter.test::lang.models.general.name'
                         type: text
                         span: auto
+                    password:
+                        label: Password (sensitive)
+                        type: sensitive
                     content:
                         label: 'winter.test::lang.models.general.content'
                         type: text
