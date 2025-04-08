@@ -25,21 +25,6 @@ fields:
         type: partial
         span: full
 
-tabs:
-  fields:
-    tags:
-      tab: Tags
-      label: tags (hasMany)
-      type: taglist
-      mode: relation
-
-    morphed_tags:
-      tab: Tags
-      label: morphed tags (morphMany)
-      type: taglist
-      mode: relation
-
-
 secondaryTabs:
     icons:
         'Basic Fields': 'icon-pencil'
@@ -293,6 +278,18 @@ secondaryTabs:
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#widget-relation" target="_blank"><code>relation</code></a> FormWidget
             commentHtml: true
             nameFrom: username
+        tags:
+            tab: FormWidgets
+            label: Tag List (HasMany Relation)
+            type: taglist
+            mode: relation
+            span: auto
+        morphed_tags:
+            tab: FormWidgets
+            label: Tag List (MorphMany Relation)
+            type: taglist
+            mode: relation
+            span: auto
 
         ##
         ## Editors
