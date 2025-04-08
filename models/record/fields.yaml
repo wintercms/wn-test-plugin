@@ -432,6 +432,11 @@ secondaryTabs:
                         label: Description
                         type: textarea
                         size: small
+        blocks:
+            label: Grouped Repeater
+            tab: Repeater
+            type: repeater
+            groups: ~/plugins/winter/test/models/record/blocks.yaml
 
         ##
         ## Files
@@ -537,10 +542,3 @@ secondaryTabs:
                 condition: value[published]
                 action: show
 
-        ##
-        ## Groups
-        ##
-        blocks:
-            tab: Blocks
-            type: repeater
-            groups: ~/plugins/winter/test/models/record/blocks.yaml
