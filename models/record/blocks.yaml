@@ -1,5 +1,5 @@
-block_test:
-    name: Test
+block_complex:
+    name: Complex
     icon: icon-bars
     fields:
         is_delayed:
@@ -48,3 +48,11 @@ block_test:
                                         field: ^^^is_delayed
                                         condition: checked
                         span: auto
+block_single:
+    name: Simple
+    icon: icon-check
+    fields:
+        value:
+            label: Simple Value
+            type: text
+            span: full
