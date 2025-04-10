@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    name:
+        label: Name
+
+    start_at:
+        label: Start at
+        type: datetime
+
+    end_at:
+        label: End at
+        type: datetime
+
+    is_allday:
+        label: All day
+        type: switch
