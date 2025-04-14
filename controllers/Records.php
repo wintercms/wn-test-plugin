@@ -24,4 +24,16 @@ class Records extends Controller
 
         BackendMenu::setContext('Winter.Test', 'test', 'records');
     }
+
+    /**
+     * Called before a list record is duplicated.
+     * @param \Winter\Storm\Database\Model|\Winter\Storm\Halcyon\Model
+     */
+    public function listBeforeReplicate($model, $original)
+    {
+        // Change original slug name
+        $model->slug = $original->slug . '_copy';
+        // Replicate attachment
+        $model->featured_image =  $original->featured_image->replicate();
+    }
 }
