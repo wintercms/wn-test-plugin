@@ -1,6 +1,5 @@
 <?php namespace Winter\Test\Controllers;
 
-use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
@@ -15,13 +14,6 @@ class Users extends Controller
     ];
 
     public $requiredPermissions = ['winter.test.access_plugin'];
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        BackendMenu::setContext('Winter.Test', 'test', 'users');
-    }
 
     public function listFilterExtendScopes($filter)
     {

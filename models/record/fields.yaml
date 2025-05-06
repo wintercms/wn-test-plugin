@@ -21,7 +21,7 @@ fields:
         disabled: true
         span: right
 
-    form_toolbar:
+    toolbar:
         type: partial
         span: full
 
@@ -432,11 +432,6 @@ secondaryTabs:
                         label: Description
                         type: textarea
                         size: small
-        blocks:
-            label: Grouped Repeater
-            tab: Repeater
-            type: repeater
-            groups: ~/plugins/winter/test/models/record/blocks.yaml
 
         ##
         ## Files

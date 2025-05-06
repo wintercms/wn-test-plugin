@@ -9,7 +9,7 @@ list: $/winter/test/models/review/columns.yaml
 modelClass: Winter\Test\Models\Review
 
 # List Title
-title: Manage Reviews
+title: winter.test::lang.models.review.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/reviews/update/:id

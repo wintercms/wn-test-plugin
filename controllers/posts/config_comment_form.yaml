@@ -16,16 +16,16 @@ defaultRedirect: winter/test/posts
 
 # Create page
 create:
-    title: Create Comments
+    title: Create Comment
     redirect: winter/test/posts/update/:id
     redirectClose: winter/test/posts
 
 # Update page
 update:
-    title: Edit Comments
+    title: Edit Comment
     redirect: winter/test/posts
     redirectClose: winter/test/posts
 
 # Preview page
 preview:
-    title: Preview Comments
+    title: Preview Comment

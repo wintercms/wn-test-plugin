@@ -9,7 +9,7 @@ list: ~/plugins/winter/test/models/person/columns.yaml
 modelClass: Winter\Test\Models\Person
 
 # List Title
-title: Manage Peoples
+title: winter.test::lang.models.person.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/people/update/:id

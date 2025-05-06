@@ -3,7 +3,6 @@
 use Backend;
 use Request;
 use Response;
-use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
@@ -22,8 +21,6 @@ class Countries extends Controller
     public function __construct()
     {
         parent::__construct();
-
-        BackendMenu::setContext('Winter.Test', 'test', 'countries');
 
         $this->addJs('/modules/system/assets/js/framework.extras.js');
         $this->addJs('/modules/system/assets/css/framework.extras.css');

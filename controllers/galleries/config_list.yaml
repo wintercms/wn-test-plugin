@@ -9,7 +9,7 @@ list: $/winter/test/models/gallery/columns.yaml
 modelClass: Winter\Test\Models\Gallery
 
 # List Title
-title: Manage Galleries
+title: winter.test::lang.models.gallery.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/galleries/update/:id
