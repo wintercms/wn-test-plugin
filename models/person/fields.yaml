@@ -8,6 +8,11 @@
 # ===================================
 
 fields:
+    _form_toggle:
+      type: partial
+      path: form_toggle
+      context: [create,update]
+
     name:
         label: Name
         commentAbove: Text field, required. Given name in the first box, preferred name in the second box.

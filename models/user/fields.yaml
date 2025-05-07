@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    _form_toggle:
+      type: partial
+      path: form_toggle
+      context: [create,update]
+
     username:
         label: Username
         span: auto

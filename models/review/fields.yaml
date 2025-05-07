@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    _form_orphan:
+      type: partial
+      path: form_orphan
+      context: [update]
+
     content:
         label: Content
         type: textarea
