@@ -32,8 +32,8 @@ fields:
     ajax_options:
         label: AJAX Options
         comment: These options should be populated using AJAX
-        path: $/winter/test/controllers/people/_ajax_options.htm
         type: partial
+        path: field_ajax_options
 
     # Record Finder (Default)
     phone:

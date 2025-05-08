@@ -182,18 +182,18 @@ secondaryTabs:
             tab: Basic Fields
             label: Partial
             type: partial
+            path: field_partial
             span: auto
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-partial" target="_blank"><code>partial</code></a> field
             commentHtml: true
-            path: $/winter/test/models/record/field.partial.php
         additional_data[basic_fields][hint]:
             tab: Basic Fields
             label: Hint
             type: hint
+            path: field_hint
             span: auto
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-hint" target="_blank"><code>hint</code></a> field
             commentHtml: true
-            path: $/winter/test/models/record/field.hint.php
         additional_data[basic_fields][section]:
             tab: Basic Fields
             label: Section
