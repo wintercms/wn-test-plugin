@@ -63,6 +63,17 @@ secondaryTabs:
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-email" target="_blank"><code>email</code></a> field
             commentHtml: true
             placeholder: email@example.com
+        additional_data[basic_fields][url]:
+            tab: Basic Fields
+            label: Email
+            type: url
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-url" target="_blank"><code>url</code></a> field
+            commentHtml: true
+            placeholder: https://example.com/
+            options:
+                https://wintercms.com: Winter CMS
+                https://laravel.com: Laravel
         additional_data[basic_fields][number]:
             tab: Basic Fields
             label: Number
