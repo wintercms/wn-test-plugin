@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Country
+name: winter.test::lang.models.country.label
 
 # Model Form Field configuration
 form: ~/plugins/winter/test/models/country/fields.yaml
@@ -16,16 +16,16 @@ defaultRedirect: winter/test/countries
 
 # Create page
 create:
-    title: Create Countries
+    title: Create Country
     redirect: winter/test/countries/update/:id
     redirectClose: winter/test/countries
 
 # Update page
 update:
-    title: Edit Countries
+    title: Edit Country
     redirect: winter/test/countries
     redirectClose: winter/test/countries
 
 # Preview page
 preview:
-    title: Preview Countries
+    title: Preview Country

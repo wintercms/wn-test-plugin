@@ -2,11 +2,11 @@
     <a
         href="<?= Backend::url('winter/test/channels/create') ?>"
         class="btn btn-primary oc-icon-plus">
-        New
+        New Channel
     </a>
     <a
         href="<?= Backend::url('winter/test/channels/reorder') ?>"
         class="btn btn-default oc-icon-bars">
-        Reorder
+        Reorder Channels
     </a>
 </div>

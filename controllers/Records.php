@@ -1,6 +1,5 @@
 <?php namespace Winter\Test\Controllers;
 
-use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
@@ -16,12 +15,7 @@ class Records extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
+    public $formLayout = 'fancy';
+
     public $bodyClass = 'compact-container';
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        BackendMenu::setContext('Winter.Test', 'test', 'records');
-    }
 }

@@ -1,6 +1,5 @@
 <?php namespace Winter\Test\Controllers;
 
-use BackendMenu;
 use Backend\Classes\Controller;
 use Winter\Test\Models\Post;
 
@@ -48,8 +47,6 @@ class Posts extends Controller
         }
 
         parent::__construct();
-
-        BackendMenu::setContext('Winter.Test', 'test', 'posts');
     }
 
     public function index()

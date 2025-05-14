@@ -3,6 +3,11 @@
 # ===================================
 
 fields:
+    _form_orphan:
+      type: partial
+      path: form_orphan
+      context: [update]
+
     content:
         label: Content
         type: textarea
@@ -27,7 +32,7 @@ fields:
     _rating_display:
         label: false
         type: partial
-        path: $/winter/test/models/review/_rating_field.htm
+        path: field_rating
         dependsOn: rating
         span: right
 

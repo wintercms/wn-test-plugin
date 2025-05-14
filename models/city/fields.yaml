@@ -19,4 +19,4 @@ fields:
     _inspector:
         label: City information
         type: partial
-        path: ~/plugins/winter/test/models/city/_inspector_field.htm
+        path: field_inspector

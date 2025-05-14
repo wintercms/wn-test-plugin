@@ -9,7 +9,7 @@ list: $/winter/test/models/city/columns.yaml
 modelClass: Winter\Test\Models\City
 
 # List Title
-title: Manage Cities
+title: winter.test::lang.models.city.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/cities/update/:id

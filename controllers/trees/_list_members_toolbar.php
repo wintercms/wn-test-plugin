@@ -2,6 +2,6 @@
     <a
         href="<?= Backend::url('winter/test/members/create') ?>"
         class="btn btn-primary oc-icon-plus">
-        New
+        New Member
     </a>
 </div>
