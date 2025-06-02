@@ -13,3 +13,9 @@ nbproject
 
 # Other ignores
 .DS_Store
+
+# Node ignores
+node_modules
+
+# Assets ignores
+assets/js/*
