@@ -10,7 +10,7 @@ use System\Models\File as FileBase;
  */
 class CustomFile extends FileBase
 {
-    protected function getPartitionDirectory()
+    protected function getPartitionDirectory(): string
     {
         return '/';
     }
@@ -20,19 +20,19 @@ class CustomFile extends FileBase
         return storage_path();
     }
 
-    public function getStorageDirectory()
+    public function getStorageDirectory(): string
     {
         return 'temp/test-plugin-custom-files';
     }
 
-    public function getPublicPath()
+    public function getPublicPath(): string
     {
         $uploadsPath = '/storage/temp/test-plugin-custom-files';
 
         return Request::getBasePath() . $uploadsPath;
     }
 
-    protected function isLocalStorage()
+    protected function isLocalStorage(): bool
     {
         return true;
     }
