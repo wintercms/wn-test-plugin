@@ -1,0 +1,32 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: Name
+
+    start_at:
+        label: Sart at
+        span: left
+        type: datepicker
+        mode: datetime
+        required: true
+        ignoreTimezone: true
+        dependsOn: is_allday
+
+    end_at:
+        label: End at
+        span: right
+        type: datepicker
+        mode: datetime
+        required: true
+        ignoreTimezone: true
+        dependsOn: is_allday
+
+    is_allday:
+        label: Is all day?
+        span: left
+        type: switch
+        default: true
