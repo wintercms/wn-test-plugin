@@ -37,6 +37,11 @@ showSorting: true
 #     column: created_at
 #     direction: desc
 
+replication:
+    enabled: true
+    allowed: [name, status]
+    ignored: []
+
 # Display checkboxes next to each record
 showCheckboxes: true
 
