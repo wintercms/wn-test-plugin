@@ -15,7 +15,8 @@ class Records extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
+    /**
+     * @var string The form layout to use. One of standard, sidebar, fancy
+     */
     public $formLayout = 'fancy';
-
-    public $bodyClass = 'compact-container';
 }
