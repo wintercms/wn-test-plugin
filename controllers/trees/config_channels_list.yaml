@@ -9,7 +9,7 @@ list: $/winter/test/models/channel/columns.yaml
 modelClass: Winter\Test\Models\Channel
 
 # List Title
-title: Manage Channels
+title: winter.test::lang.models.channel.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/channels/update/:id

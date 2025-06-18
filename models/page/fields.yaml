@@ -18,7 +18,6 @@ fields:
     toolbar:
         label: false
         type: partial
-        path: $/winter/test/models/page/_toolbar.htm
 
 tabs:
     cssClass: master-area

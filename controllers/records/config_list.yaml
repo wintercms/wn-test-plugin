@@ -9,7 +9,7 @@ list: $/winter/test/models/record/columns.yaml
 modelClass: Winter\Test\Models\Record
 
 # List Title
-title: 'winter.test::lang.models.record.label_plural'
+title: winter.test::lang.models.record.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/records/update/:id

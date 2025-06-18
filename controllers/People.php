@@ -2,7 +2,6 @@
 
 use Mail;
 use Flash;
-use BackendMenu;
 use Winter\Test\Models\Phone;
 use Backend\Classes\FormField;
 use Backend\Classes\Controller;
@@ -20,13 +19,6 @@ class People extends Controller
     ];
 
     public $requiredPermissions = ['winter.test.access_plugin'];
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        BackendMenu::setContext('Winter.Test', 'test', 'people');
-    }
 
     public function onSendTestEmail()
     {

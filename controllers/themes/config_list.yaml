@@ -9,7 +9,7 @@ list: $/winter/test/models/theme/columns.yaml
 modelClass: Winter\Test\Models\Theme
 
 # List Title
-title: Manage Themes
+title: winter.test::lang.models.theme.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/themes/update/:id

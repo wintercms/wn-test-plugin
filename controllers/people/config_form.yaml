@@ -16,16 +16,16 @@ defaultRedirect: winter/test/people
 
 # Create page
 create:
-    title: Create People
+    title: Create Person
     redirect: winter/test/people/update/:id
     redirectClose: winter/test/people
 
 # Update page
 update:
-    title: Edit People
+    title: Edit Person
     redirect: winter/test/people
     redirectClose: winter/test/people
 
 # Preview page
 preview:
-    title: Preview People
+    title: Preview Person

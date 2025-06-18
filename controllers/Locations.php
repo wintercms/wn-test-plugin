@@ -1,6 +1,5 @@
 <?php namespace Winter\Test\Controllers;
 
-use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
@@ -12,11 +11,4 @@ class Locations extends Controller
         \Backend\Behaviors\FormController::class,
         \Backend\Behaviors\ListController::class,
     ];
-
-    public function __construct()
-    {
-        parent::__construct();
-
-        BackendMenu::setContext('Winter.Test', 'test', 'locations');
-    }
 }

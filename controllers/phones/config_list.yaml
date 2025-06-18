@@ -9,7 +9,7 @@ list: $/winter/test/models/phone/columns.yaml
 modelClass: Winter\Test\Models\Phone
 
 # List Title
-title: Manage Phones
+title: winter.test::lang.models.phone.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/phones/update/:id

@@ -21,7 +21,7 @@ fields:
         disabled: true
         span: right
 
-    form_toolbar:
+    toolbar:
         type: partial
         span: full
 
@@ -193,18 +193,18 @@ secondaryTabs:
             tab: Basic Fields
             label: Partial
             type: partial
+            path: field_partial
             span: auto
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#partial" target="_blank"><code>partial</code></a> field
             commentHtml: true
-            path: $/winter/test/models/record/field.partial.php
         additional_data[basic_fields][hint]:
             tab: Basic Fields
             label: Hint
             type: hint
+            path: field_hint
             span: auto
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#hint" target="_blank"><code>hint</code></a> field
             commentHtml: true
-            path: $/winter/test/models/record/field.hint.php
         additional_data[basic_fields][section]:
             tab: Basic Fields
             label: Section
@@ -443,7 +443,8 @@ secondaryTabs:
                         label: Description
                         type: textarea
                         size: small
-        blocks:
+
+        additional_data[blocks]:
             label: Grouped Repeater
             tab: Repeater
             type: repeater
@@ -547,9 +548,8 @@ secondaryTabs:
             span: right
             type: datepicker
             mode: datetime
-            required: true # used because the validation rule is required_if
+            required: false
             trigger:
                 field: status
                 condition: value[published]
                 action: show
-
