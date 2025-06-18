@@ -537,7 +537,7 @@ secondaryTabs:
             span: right
             type: datepicker
             mode: datetime
-            required: true # used because the validation rule is required_if
+            required: false
             trigger:
                 field: status
                 condition: value[published]
