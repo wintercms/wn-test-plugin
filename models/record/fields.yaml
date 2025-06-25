@@ -60,15 +60,26 @@ secondaryTabs:
             label: Email
             type: email
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-email" target="_blank"><code>email</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#email" target="_blank"><code>email</code></a> field
             commentHtml: true
             placeholder: email@example.com
+        additional_data[basic_fields][url]:
+            tab: Basic Fields
+            label: URL
+            type: url
+            span: auto
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#url" target="_blank"><code>url</code></a> field
+            commentHtml: true
+            placeholder: https://example.com/
+            options:
+                https://wintercms.com: Winter CMS
+                https://laravel.com: Laravel
         additional_data[basic_fields][number]:
             tab: Basic Fields
             label: Number
             type: number
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-number" target="_blank"><code>number</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#number" target="_blank"><code>number</code></a> field
             commentHtml: true
             min: 0
             max: 100
@@ -79,21 +90,21 @@ secondaryTabs:
             label: Password
             type: password
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-password" target="_blank"><code>password</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#password" target="_blank"><code>password</code></a> field
             commentHtml: true
         additional_data[basic_fields][text]:
             tab: Basic Fields
             label: Text
             type: text
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-text" target="_blank"><code>text</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#text" target="_blank"><code>text</code></a> field
             commentHtml: true
         additional_data[basic_fields][textarea]:
             tab: Basic Fields
             label: Textarea
             type: textarea
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-textarea" target="_blank"><code>textarea</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#textarea" target="_blank"><code>textarea</code></a> field
             commentHtml: true
             size: small
         additional_data[basic_fields][range]:
@@ -101,7 +112,7 @@ secondaryTabs:
             label: Range
             type: range
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-range" target="_blank"><code>range</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#range" target="_blank"><code>range</code></a> field
             commentHtml: true
 
         _section_optionable:
@@ -116,7 +127,7 @@ secondaryTabs:
             label: Checkbox List
             type: checkboxlist
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-checkboxlist" target="_blank"><code>checkboxlist</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#checkboxlist" target="_blank"><code>checkboxlist</code></a> field
             commentHtml: true
             options: [\Winter\Test\Models\Record, staticGetOptions]
             default: option1
@@ -125,7 +136,7 @@ secondaryTabs:
             label: Radio
             type: radio
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-radio" target="_blank"><code>radio</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#radio" target="_blank"><code>radio</code></a> field
             commentHtml: true
             options: [\Winter\Test\Models\Record, staticGetOptions]
             default: option2
@@ -134,7 +145,7 @@ secondaryTabs:
             label: Dropdown
             type: dropdown
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-dropdown" target="_blank"><code>dropdown</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#dropdown" target="_blank"><code>dropdown</code></a> field
             commentHtml: true
             options: [\Winter\Test\Models\Record, staticGetOptions]
             default: option3
@@ -143,7 +154,7 @@ secondaryTabs:
             label: Balloon Selector
             type: balloon-selector
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-balloon" target="_blank"><code>balloon-selector</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#balloon" target="_blank"><code>balloon-selector</code></a> field
             commentHtml: true
             options: [\Winter\Test\Models\Record, staticGetOptions]
             default: option4
@@ -160,14 +171,14 @@ secondaryTabs:
             label: Checkbox
             type: checkbox
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-checkbox" target="_blank"><code>checkbox</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#checkbox" target="_blank"><code>checkbox</code></a> field
             commentHtml: true
         additional_data[basic_fields][switch]:
             tab: Basic Fields
             label: Switch
             type: switch
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-switch" target="_blank"><code>switch</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#switch" target="_blank"><code>switch</code></a> field
             commentHtml: true
             on: Yes
             off: No
@@ -182,25 +193,59 @@ secondaryTabs:
             tab: Basic Fields
             label: Partial
             type: partial
-            path: field_partial
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-partial" target="_blank"><code>partial</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#partial" target="_blank"><code>partial</code></a> field
             commentHtml: true
+            path: $/winter/test/models/record/field.partial.php
         additional_data[basic_fields][hint]:
             tab: Basic Fields
             label: Hint
             type: hint
-            path: field_hint
             span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-hint" target="_blank"><code>hint</code></a> field
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#hint" target="_blank"><code>hint</code></a> field
             commentHtml: true
+            path: $/winter/test/models/record/field.hint.php
         additional_data[basic_fields][section]:
             tab: Basic Fields
             label: Section
             type: section
-            span: auto
-            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#field-section" target="_blank"><code>section</code></a> field
+            span: full
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#section" target="_blank"><code>section</code></a> field
             commentHtml: true
+        _button_button:
+            tab: Basic Fields
+            span: auto
+            label: Button (button action)
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#button" target="_blank"><code>button (button)</code></a> field
+            commentHtml: true
+            type: button
+            buttonLabel: Triggers AJAX request
+            request: onBasicButton
+            icon: 'icon-cog'
+            loading: Working...
+        _button_link:
+            tab: Basic Fields
+            span: auto
+            label: Button (link action)
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#button" target="_blank"><code>button (link)</code></a> field
+            commentHtml: true
+            type: button
+            buttonLabel: Opens URL
+            buttonType: link
+            href: 'https://example.com/'
+            icon: icon-link
+            target: blank
+        _button_popup:
+            tab: Basic Fields
+            span: auto
+            label: Button (popup action)
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#button" target="_blank"><code>button (popup)</code></a> field
+            commentHtml: true
+            type: button
+            buttonLabel: Opens Popup
+            buttonType: danger
+            handler: onRenderBasicPopup
+            icon: icon-up-right-from-square
 
         ##
         ## FormWidgets
