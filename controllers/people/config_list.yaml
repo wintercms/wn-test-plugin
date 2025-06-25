@@ -18,7 +18,7 @@ recordUrl: winter/test/people/update/:id
 noRecordsMessage: backend::lang.list.no_records
 
 # Records to display per page
-recordsPerPage: 20
+recordsPerPage: 2
 
 # Displays the list column set up button
 showSetup: true
@@ -43,3 +43,5 @@ toolbar:
     search:
         prompt: backend::lang.list.search_prompt
         mode: any
+
+filter: config_filter.yaml
