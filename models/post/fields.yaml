@@ -4,6 +4,11 @@
 
 fields:
 
+    _form_toggle:
+      type: partial
+      path: form_toggle
+      context: [create,update]
+
     name:
         label: Name
         commentAbove: Text field, <a href="#">required</a>.

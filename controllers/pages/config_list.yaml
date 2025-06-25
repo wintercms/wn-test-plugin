@@ -9,7 +9,7 @@ list: $/winter/test/models/page/columns.yaml
 modelClass: Winter\Test\Models\Page
 
 # List Title
-title: Manage Pages
+title: winter.test::lang.models.page.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/pages/update/:id

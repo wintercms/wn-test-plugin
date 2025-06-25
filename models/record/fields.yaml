@@ -21,7 +21,7 @@ fields:
         disabled: true
         span: right
 
-    form_toolbar:
+    toolbar:
         type: partial
         span: full
 
@@ -209,9 +209,43 @@ secondaryTabs:
             tab: Basic Fields
             label: Section
             type: section
-            span: auto
+            span: full
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#section" target="_blank"><code>section</code></a> field
             commentHtml: true
+        _button_button:
+            tab: Basic Fields
+            span: auto
+            label: Button (button action)
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#button" target="_blank"><code>button (button)</code></a> field
+            commentHtml: true
+            type: button
+            buttonLabel: Triggers AJAX request
+            request: onBasicButton
+            icon: 'icon-cog'
+            loading: Working...
+        _button_link:
+            tab: Basic Fields
+            span: auto
+            label: Button (link action)
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#button" target="_blank"><code>button (link)</code></a> field
+            commentHtml: true
+            type: button
+            buttonLabel: Opens URL
+            buttonType: link
+            href: 'https://example.com/'
+            icon: icon-link
+            target: blank
+        _button_popup:
+            tab: Basic Fields
+            span: auto
+            label: Button (popup action)
+            commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#button" target="_blank"><code>button (popup)</code></a> field
+            commentHtml: true
+            type: button
+            buttonLabel: Opens Popup
+            buttonType: danger
+            handler: onRenderBasicPopup
+            icon: icon-up-right-from-square
 
         ##
         ## FormWidgets
@@ -443,7 +477,8 @@ secondaryTabs:
                         label: Description
                         type: textarea
                         size: small
-        blocks:
+
+        additional_data[blocks]:
             label: Grouped Repeater
             tab: Repeater
             type: repeater
@@ -547,9 +582,8 @@ secondaryTabs:
             span: right
             type: datepicker
             mode: datetime
-            required: true # used because the validation rule is required_if
+            required: false
             trigger:
                 field: status
                 condition: value[published]
                 action: show
-

@@ -9,7 +9,7 @@ list: ~/plugins/winter/test/models/country/columns.yaml
 modelClass: Winter\Test\Models\Country
 
 # List Title
-title: Manage Countries
+title: winter.test::lang.models.country.label_plural
 
 # Link URL for each record
 recordUrl: winter/test/countries/update/:id

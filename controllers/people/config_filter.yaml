@@ -1,0 +1,77 @@
+scopes:
+    status:
+        label: Status
+        type: button-group
+        # conditions: status = :filtered
+        options:
+            all: All
+            active: Active
+            archived: Archived
+
+    status_dropdown:
+        type: dropdown
+        emptyOption: Select status
+        default: active
+        # conditions: status = :filtered
+        options:
+            all: All
+            active: Active
+            archived: Archived
+
+    status_group:
+        label: Status
+        type: group
+        # conditions: status in (:filtered)
+        options:
+            pending: Pending
+            active: Active
+            closed: Closed
+
+    published:
+        label: Hide published
+        type: checkbox
+        default: 1
+        # conditions: is_published <> true
+
+    approved:
+        label: Approved
+        type: switch
+        default: 1
+        conditions:
+            # - is_approved <> true
+            # - is_approved = true
+
+    name:
+        label: Name
+        type: text
+        conditions: name = :value
+        size: 2
+
+    expenses_min:
+        label: Expenses >=
+        type: number
+        step: 1
+        min: 0
+        max: 1000
+        conditions: expenses >= ':filtered'
+
+    expenses_range:
+        label: Expenses Range
+        type: numberrange
+        conditions: expenses >= ':min' and expenses <= ':max'
+
+    created_at:
+        label: Date after
+        type: date
+        minDate: '2001-01-23'
+        maxDate: '2030-10-13'
+        yearRange: 10
+        conditions: created_at >= ':filtered'
+
+    published_at:
+        label: Date Range
+        type: daterange
+        minDate: '2001-01-23'
+        maxDate: '2030-10-13'
+        yearRange: 10
+        conditions: created_at >= ':after' AND created_at <= ':before'

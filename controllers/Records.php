@@ -1,7 +1,9 @@
-<?php namespace Winter\Test\Controllers;
+<?php
 
-use BackendMenu;
+namespace Winter\Test\Controllers;
+
 use Backend\Classes\Controller;
+use Winter\Storm\Support\Facades\Flash;
 
 /**
  * Records Backend Controller
@@ -16,12 +18,20 @@ class Records extends Controller
         \Backend\Behaviors\ListController::class,
     ];
 
-    public $bodyClass = 'compact-container';
+    /**
+     * @var string The form layout to use. One of standard, sidebar, fancy
+     */
+    public $formLayout = 'fancy';
 
-    public function __construct()
+    public function onBasicButton()
     {
-        parent::__construct();
+        sleep(1);
+        Flash::success("AJAX request succeeded!");
+    }
 
-        BackendMenu::setContext('Winter.Test', 'test', 'records');
+    public function onRenderBasicPopup()
+    {
+        sleep(1);
+        return $this->makePartial('basic_popup');
     }
 }

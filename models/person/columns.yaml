@@ -21,11 +21,14 @@ columns:
     expenses:
         label: Expenses
         format: $ %.2f
+        type: number
+        summable: true
 
     phone:
         label: Phone
         relation: phone
         select: number
+        sortable: false
 
     birth:
         label: Born

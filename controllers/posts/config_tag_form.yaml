@@ -16,16 +16,16 @@ defaultRedirect: winter/test/posts
 
 # Create page
 create:
-    title: Create Tags
+    title: Create Tag
     redirect: winter/test/tags/update/:id
     redirectClose: winter/test/tags
 
 # Update page
 update:
-    title: Edit Tags
+    title: Edit Tag
     redirect: winter/test/tags
     redirectClose: winter/test/tags
 
 # Preview page
 preview:
-    title: Preview Tags
+    title: Preview Tag
