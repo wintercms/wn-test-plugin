@@ -196,7 +196,7 @@ secondaryTabs:
             span: auto
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#partial" target="_blank"><code>partial</code></a> field
             commentHtml: true
-            path: $/winter/test/models/record/field.partial.php
+            path: field_partial
         additional_data[basic_fields][hint]:
             tab: Basic Fields
             label: Hint
@@ -204,7 +204,7 @@ secondaryTabs:
             span: auto
             commentAbove: Demonstration of a <a href="https://wintercms.com/docs/backend/forms/#hint" target="_blank"><code>hint</code></a> field
             commentHtml: true
-            path: $/winter/test/models/record/field.hint.php
+            path: field_hint
         additional_data[basic_fields][section]:
             tab: Basic Fields
             label: Section
