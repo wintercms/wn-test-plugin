@@ -1,0 +1,24 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+list: ~/plugins/winter/test/models/event/columns.yaml
+
+modelClass: Winter\Test\Models\Event
+
+title: Events
+
+recordUrl: winter/test/events/update/:id
+
+noRecordsMessage: backend::lang.list.no_records
+
+recordsPerPage: 20
+
+showSearch: true
+
+showSetup: true
+
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt

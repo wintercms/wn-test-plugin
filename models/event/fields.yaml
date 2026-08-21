@@ -1,0 +1,37 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: Name
+        span: left
+
+    color:
+        label: Colour
+        type: colorpicker
+        span: right
+
+    start_at:
+        label: Start
+        type: datepicker
+        mode: datetime
+        span: left
+
+    end_at:
+        label: End
+        type: datepicker
+        mode: datetime
+        span: right
+
+    all_day:
+        label: All day event
+        type: switch
+        span: left
+
+    rrule:
+        label: Recurrence rule (RRULE)
+        type: text
+        span: right
+        comment: 'Optional. e.g. FREQ=WEEKLY;INTERVAL=1;COUNT=10 or FREQ=MONTHLY'
+        placeholder: 'FREQ=WEEKLY'

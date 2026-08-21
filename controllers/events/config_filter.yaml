@@ -1,0 +1,16 @@
+# ===================================
+#  Filter Scope Definitions
+# ===================================
+
+scopes:
+    all_day:
+        label: All-day only
+        type: switch
+        conditions:
+            - all_day <> true
+            - all_day = true
+
+    date_range:
+        label: Date range
+        type: daterange
+        conditions: start_at >= ':after' AND start_at <= ':before'

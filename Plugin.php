@@ -49,6 +49,11 @@ class Plugin extends PluginBase
                 'permissions' => ['winter.test.access_plugin'],
 
                 'sideMenu' => [
+                    'events' => [
+                        'label' => 'Events Calendar',
+                        'icon'  => 'icon-calendar',
+                        'url'   => Backend::url('winter/test/events/calendar'),
+                    ],
                     'cities' => [
                         'label' => 'Cities',
                         'icon'  => 'icon-city',
@@ -214,5 +219,60 @@ class Plugin extends PluginBase
                 });
             }
         }
+
+        $this->bootCalendarRecurrence();
+    }
+
+    /**
+     * Demonstrates the CalendarController behavior's server-side recurrence pattern for the
+     * Events calendar: recurring master rows survive the query (via the recurrence-aware window
+     * constraint), then get expanded into concrete occurrences for the visible window.
+     */
+    protected function bootCalendarRecurrence(): void
+    {
+        \Event::listen('backend.calendar.extendQueryBefore', function ($widget, $query, $startTime, $endTime) {
+            if (!($widget->model instanceof \Winter\Test\Models\Event)) {
+                return;
+            }
+
+            // Replace the built-in window filter with one that keeps rows intersecting the
+            // window OR carrying a recurrence rule (masters are expanded in extendRecords below).
+            $widget->setApplyDateRangeFilter(false);
+
+            if ($startTime && $endTime) {
+                $start = \Carbon\Carbon::createFromTimestamp($startTime);
+                $end = \Carbon\Carbon::createFromTimestamp($endTime);
+                $query->where(function ($q) use ($start, $end) {
+                    $q->whereNotNull('rrule')
+                        ->orWhere(function ($inner) use ($start, $end) {
+                            $inner->where('start_at', '<', $end)
+                                ->where(function ($e) use ($start) {
+                                    $e->where('end_at', '>=', $start)
+                                        ->orWhere(function ($point) use ($start) {
+                                            $point->whereNull('end_at')->where('start_at', '>=', $start);
+                                        });
+                                });
+                        });
+                });
+            }
+        });
+
+        \Event::listen('backend.calendar.extendRecords', function ($widget, &$records, $startTime, $endTime) {
+            if (!($widget->model instanceof \Winter\Test\Models\Event) || !$startTime || !$endTime) {
+                return;
+            }
+
+            $windowStart = \Carbon\Carbon::createFromTimestamp($startTime);
+            $windowEnd = \Carbon\Carbon::createFromTimestamp($endTime);
+
+            $expanded = collect();
+            foreach ($records as $record) {
+                foreach ($record->expandOccurrences($windowStart, $windowEnd) as $occurrence) {
+                    $expanded->push($occurrence);
+                }
+            }
+
+            return $expanded;
+        });
     }
 }
