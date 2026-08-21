@@ -1,0 +1,30 @@
+# ===================================
+#  Calendar Behavior Config
+# ===================================
+
+modelClass: Winter\Test\Models\Event
+
+title: Events Calendar
+
+searchList: ~/plugins/winter/test/models/event/columns.yaml
+
+recordUrl: winter/test/events/update/:id
+
+recordTitle: name
+recordStart: start_at
+recordEnd: end_at
+recordAllDay: all_day
+recordColor: color
+recordTooltip: [recordTitle]
+
+availableDisplayModes: [month, week, day, list]
+initialView: month
+firstDay: 1
+previewMode: false
+
+toolbar:
+    buttons: calendar_toolbar
+    search:
+        prompt: backend::lang.list.search_prompt
+
+filter: config_filter.yaml

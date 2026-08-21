@@ -1,0 +1,24 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Event
+
+form: ~/plugins/winter/test/models/event/fields.yaml
+
+modelClass: Winter\Test\Models\Event
+
+defaultRedirect: winter/test/events
+
+create:
+    title: New Event
+    redirect: winter/test/events/update/:id
+    redirectClose: winter/test/events
+
+update:
+    title: Edit Event
+    redirect: winter/test/events
+    redirectClose: winter/test/events
+
+delete:
+    redirect: winter/test/events

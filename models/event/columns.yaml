@@ -1,0 +1,28 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    name:
+        label: Name
+        searchable: true
+
+    start_at:
+        label: Start
+        type: datetime
+
+    end_at:
+        label: End
+        type: datetime
+
+    all_day:
+        label: All day
+        type: switch
+
+    rrule:
+        label: Recurrence
+        searchable: true

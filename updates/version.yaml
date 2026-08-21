@@ -27,3 +27,6 @@
 "2.1.2":
     - "Add example of tags in relation mode for hasMany/morphMany relation types"
     - v2.1.2/add_tags_foreign_keys.php
+"2.3.0":
+    - "Add Event model and calendar controller to test the CalendarController behavior"
+    - v2.3.0/create_winter_test_events_table.php
