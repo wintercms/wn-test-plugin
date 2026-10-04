@@ -104,6 +104,11 @@ class Plugin extends PluginBase
                         'icon'  => 'icon-users',
                         'url'   => Backend::url('winter/test/users'),
                     ],
+                    'vue' => [
+                        'label' => 'Vue',
+                        'icon'  => 'icon-cube',
+                        'url'   => Backend::url('winter/test/vue'),
+                    ],
                 ],
             ],
         ];
