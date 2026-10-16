@@ -1,0 +1,21 @@
+Thank You for Using WinterCMS!
+================================
+
+Thank you for using WinterCMS and for being part of our community.
+
+WinterCMS is an open-source content management system built to help
+developers create and maintain websites with flexibility and ease.
+
+This file is provided by the Winter.Test plugin as an example download.
+If you can read this message, the download link is working correctly!
+
+We appreciate your support and hope you enjoy building with WinterCMS.
+
+Learn more:
+https://wintercms.com/
+
+Source code:
+https://github.com/wintercms/winter
+
+----------------------------------------
+WinterCMS — Open source. Community driven.

@@ -51,8 +51,8 @@ class Countries extends Controller
     public function download()
     {
         sleep(3);
-        return Response::download(base_path('modules/backend/assets/images/logo.svg'), 'logo.svg', [
-            'Content-Type' => 'image/svg',
+        return Response::download(base_path('plugins/winter/test/assets/downloads/test-download.txt'), 'winter-download.txt', [
+            'Content-Type' => 'text/plain',
         ]);
     }
 
