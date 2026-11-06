@@ -18,3 +18,28 @@ fields:
         type: relation
         nameFrom: custom_title
         span: auto
+
+    section:
+        type: section
+        label: Tree view display
+        comment: Same fields as above, but with tree view enabled
+
+    related_treeview:
+        valueFrom: related
+        label: Related (SQL select)
+        type: relation
+        select: title
+        span: auto
+        quickselect: true
+        displayTree: true
+        quickTreeActions: true
+
+    related_custom_treeview:
+        valueFrom: related
+        label: Related (Custom attribute)
+        type: relation
+        nameFrom: custom_title
+        span: auto
+        quickselect: true
+        displayTree: true
+        quickTreeActions: true
